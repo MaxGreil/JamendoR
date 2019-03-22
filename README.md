@@ -35,7 +35,7 @@ my_oauth <- jamendoOAuth(app_name="xxxx")
 
 For certain functions and applications, you'll need to log in as a Jamendo user. To do this, your Jamendo application needs to have a callback url. You can set this to whatever you want that will work with your application, but a good default option is `http://localhost:1410/` (see image below). For more information on authorization, visit the offical [Jamendo Developer Guide](https://developer.jamendo.com/v3.0/authentication).
 
-<img src="man/figures/JamendoR_auth_screenshot.png" width="50%" />
+<img src="man/figures/JamendoR_auth_screenshot.PNG" width="50%" />
 
 Usage
 -----
