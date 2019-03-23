@@ -7,8 +7,9 @@
 #' file in disk to be re-used in future sessions. This function relies on the
 #' \code{httr} package to create the OAuth token
 #'@param app_name App name (this is an internal identification for token if you wish to save authorization)
-#'@param client_id Defaults to System Envioronment variable "JAMENDO_CLIENT_ID"
-#'@param client_secret Defaults to System Envioronment variable "JAMENDO_CLIENT_SECRET"
+#'@param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
+#'@param client_secret Defaults to System Environment variable "JAMENDO_CLIENT_SECRET"
+#'@return Returns an OAuth access token as environment
 #' @examples \dontrun{
 #' ## Example
 #'  my_oauth <- jamendoOAuth(app_name="xxxx")
@@ -37,13 +38,11 @@ jamendoOAuth<-function(app_name, client_id = Sys.getenv('JAMENDO_CLIENT_ID'), cl
 #' file in disk to be re-used in future sessions. This function relies on the
 #' \code{httr} package to refresh the OAuth token
 #'@param token OAuth access token (the previously created OAuth token)
-#'@param client_id Defaults to System Envioronment variable "JAMENDO_CLIENT_ID"
-#'@param client_secret Defaults to System Envioronment variable "JAMENDO_CLIENT_SECRET"
+#'@param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
+#'@param client_secret Defaults to System Environment variable "JAMENDO_CLIENT_SECRET"
+#'@return Returns an OAuth access token as environment
 #' @examples \dontrun{
 #' ## Example
-#'  my_oauth <- jamendoOAuth(app_name="xxxx")
-#'  save(my_oauth, file="my_oauth")
-#'  load("my_oauth")
 #'  my_oauth <- resfreshToken(my_oauth)
 #'  save(my_oauth, file="my_oauth")
 #'  load("my_oauth")

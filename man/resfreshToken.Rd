@@ -10,9 +10,12 @@ resfreshToken(token, client_id = Sys.getenv("JAMENDO_CLIENT_ID"),
 \arguments{
 \item{token}{OAuth access token (the previously created OAuth token)}
 
-\item{client_id}{Defaults to System Envioronment variable "JAMENDO_CLIENT_ID"}
+\item{client_id}{Defaults to System Environment variable "JAMENDO_CLIENT_ID"}
 
-\item{client_secret}{Defaults to System Envioronment variable "JAMENDO_CLIENT_SECRET"}
+\item{client_secret}{Defaults to System Environment variable "JAMENDO_CLIENT_SECRET"}
+}
+\value{
+Returns an OAuth access token as environment
 }
 \description{
 \code{refreshToken} refreshes an OAuth access token that enables R to make
@@ -23,9 +26,6 @@ file in disk to be re-used in future sessions. This function relies on the
 \examples{
 \dontrun{
 ## Example
- my_oauth <- jamendoOAuth(app_name="xxxx")
- save(my_oauth, file="my_oauth")
- load("my_oauth")
  my_oauth <- resfreshToken(my_oauth)
  save(my_oauth, file="my_oauth")
  load("my_oauth")

@@ -9,6 +9,9 @@ parseResponse(res)
 \arguments{
 \item{res}{String from POST request}
 }
+\value{
+Returns string with response message
+}
 \description{
 \code{parse} parses response from POST request for setUser functions.
 }

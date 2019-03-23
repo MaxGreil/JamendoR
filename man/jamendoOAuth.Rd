@@ -10,9 +10,12 @@ jamendoOAuth(app_name, client_id = Sys.getenv("JAMENDO_CLIENT_ID"),
 \arguments{
 \item{app_name}{App name (this is an internal identification for token if you wish to save authorization)}
 
-\item{client_id}{Defaults to System Envioronment variable "JAMENDO_CLIENT_ID"}
+\item{client_id}{Defaults to System Environment variable "JAMENDO_CLIENT_ID"}
 
-\item{client_secret}{Defaults to System Envioronment variable "JAMENDO_CLIENT_SECRET"}
+\item{client_secret}{Defaults to System Environment variable "JAMENDO_CLIENT_SECRET"}
+}
+\value{
+Returns an OAuth access token as environment
 }
 \description{
 \code{jamendoOAuth} creates a long-lived OAuth access token that enables R to make

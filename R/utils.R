@@ -25,6 +25,7 @@ controlInputVariables<-function(id,name) {
 #' \code{controlLimit} checks if  given limit is smaller than 200.
 #' Returns warning if limit is greater than 200 and sets limit to 200.
 #' @param limit Integer to check
+#' @return Returns integer limit
 #' @export
 
 controlLimit<-function(limit) {
@@ -41,6 +42,7 @@ controlLimit<-function(limit) {
 #' @description
 #' \code{parse} parses response from POST request for setUser functions.
 #' @param res String from POST request
+#' @return Returns string with response message
 #' @export
 
 parseResponse<-function(res) {

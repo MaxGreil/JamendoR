@@ -9,6 +9,9 @@ controlLimit(limit)
 \arguments{
 \item{limit}{Integer to check}
 }
+\value{
+Returns integer limit
+}
 \description{
 \code{controlLimit} checks if  given limit is smaller than 200.
 Returns warning if limit is greater than 200 and sets limit to 200.
