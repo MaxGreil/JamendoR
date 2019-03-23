@@ -29,6 +29,8 @@ Sys.setenv(JAMENDO_CLIENT_ID = 'xxxxxxxxxxxxxxxxxxxxx')
 Sys.setenv(JAMENDO_CLIENT_SECRET = 'xxxxxxxxxxxxxxxxxxxxx')
 
 my_oauth <- jamendoOAuth(app_name="xxxx")
+save(my_oauth, file="my_oauth")
+load("my_oauth")
 ```
 
 #### Authorization code flow

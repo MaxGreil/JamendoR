@@ -11,3 +11,5 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: TRUE
 RoxygenNote: 6.1.1
+URL: http://github.com/MaxGreil/JamendoR
+BugReports: http://github.com/MaxGreil/JamendoR/issues
