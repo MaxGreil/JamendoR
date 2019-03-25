@@ -1,5 +1,13 @@
+#' @title Search Jamendo database for an album
+#' @description Search Jamendo database for an album. You can search for either an album ID or an album name.
+#' @param album_id Album ID to seach for
+#' @param album_name Album name to seach for
+#' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
+#' @return Returns a data frame which contains information about an album.
+#' See \url{https://developer.jamendo.com/v3.0/albums} for more information.
+#' @export
 
-getAlbum<-function(album_id=NULL, album_name=NULL) {
+getAlbum<-function(album_id=NULL, album_name=NULL, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
   controlInputVariables(album_id,album_name)
   url <- 'https://api.jamendo.com/v3.0/albums/'
   if(is.null(album_id)) {
@@ -21,7 +29,14 @@ getAlbum<-function(album_id=NULL, album_name=NULL) {
   }
 }
 
-getAlbums<-function(album_ids) {
+#' Search Jamendo database for several albums
+#' @param album_ids List of album IDs to seach for
+#' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
+#' @return Returns a data frame which contains information about several albums.
+#' See \url{https://developer.jamendo.com/v3.0/albums} for more information.
+#' @export
+
+getAlbums<-function(album_ids, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
   url <- 'https://api.jamendo.com/v3.0/albums/'
   params = list(client_id = client_id,
                 format = 'jsonpretty',
@@ -35,7 +50,16 @@ getAlbums<-function(album_ids) {
   }
 }
 
-getAlbumTracks<-function(album_id=NULL, album_name=NULL) {
+#' @title Get tracks from an album
+#' @description Get tracks from an album. You can search for either an album ID or an album name.
+#' @param album_id Album ID to seach for
+#' @param album_name Album name to seach for
+#' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
+#' @return Returns a data frame which contains information about tracks from an album.
+#' See \url{https://developer.jamendo.com/v3.0/albums/tracks} for more information.
+#' @export
+
+getAlbumTracks<-function(album_id=NULL, album_name=NULL, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
   controlInputVariables(album_id,album_name)
   url <- 'https://api.jamendo.com/v3.0/albums/tracks/'
   if(is.null(album_id)) {
@@ -55,7 +79,16 @@ getAlbumTracks<-function(album_id=NULL, album_name=NULL) {
   }
 }
 
-getAlbumMusicinfo<-function(album_id=NULL, album_name=NULL) {
+#' @title Get tag list of an album
+#' @description Get tag list of an album. You can search for either an album ID or an album name.
+#' @param album_id Album ID to seach for
+#' @param album_name Album name to seach for
+#' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
+#' @return Returns a data frame which contains tag list of an album.
+#' See \url{https://developer.jamendo.com/v3.0/albums/musicinfo} for more information.
+#' @export
+
+getAlbumMusicinfo<-function(album_id=NULL, album_name=NULL, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
   controlInputVariables(album_id,album_name)
   url <- 'https://api.jamendo.com/v3.0/albums/musicinfo/'
   if(is.null(album_id)) {
