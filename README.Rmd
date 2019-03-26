@@ -39,9 +39,9 @@ The easiest way to authenticate is to set your credentials to the System Environ
 Sys.setenv(JAMENDO_CLIENT_ID = 'xxxxxxxxxxxxxxxxxxxxx')
 Sys.setenv(JAMENDO_CLIENT_SECRET = 'xxxxxxxxxxxxxxxxxxxxx')
 
-my_oauth <- jamendoOAuth(app_name="xxxx")
-save(my_oauth, file="my_oauth")
-load("my_oauth")
+token <- jamendoOAuth(app_name="xxxx")
+save(token, file="token")
+load("token")
 ```
 
 
@@ -55,3 +55,89 @@ knitr::include_graphics('man/figures/JamendoR_auth_screenshot.PNG')
 
 ## Usage
 
+### Get information about a specific user:
+
+```{r, eval = FALSE}
+user <- getUserProfile(user_name = "claudod")
+#      id dispname lang creationdate
+#1 972174  claudod   it   2010-10-17
+```
+
+### Search for an artist:
+
+```{r, eval = FALSE}
+artists <- getArtistsLocation("GRC", limit=3)
+#      id            name                                website   joindate                 shorturl
+#1   1510 Judas Priestley      http://myspace.com/judaspriestley 2006-03-21   http://jamen.do/a/1510
+#2 338873           nasos                                        2008-03-25 http://jamen.do/a/338873
+#3 348714          e.k.m. http://epithesikatametopo.blogspot.com 2009-03-16 http://jamen.do/a/348714
+#                              shareurl
+#1   http://www.jamendo.com/artist/1510
+#2 http://www.jamendo.com/artist/338873
+#3 http://www.jamendo.com/artist/348714
+```
+
+### Get information about an artist using the artist id:
+
+```{r, eval = FALSE}
+artist <- getArtist(artist_id = "1510")
+#    id            name                           website   joindate               shorturl
+#1 1510 Judas Priestley http://myspace.com/judaspriestley 2006-03-21 http://jamen.do/a/1510
+#                            shareurl
+#1 http://www.jamendo.com/artist/1510
+```
+
+### Get information about albums available from a specific artist:
+
+```{r, eval = FALSE}
+albums <- getArtistAlbums(artist_id = "1510")
+#     id                name releasedate                                                         image
+#1 14866 Deuteranopia Utopia  2007-12-04 https://imgjam1.jamendo.com/albums/s14/14866/covers/1.200.jpg
+```
+
+### Get songs from a specific album:
+```{r, eval = FALSE}
+tracks <- getAlbumTracks(album_id = "14866")
+#      id position           name duration                                     license_ccurl
+#1 114069        1 Deuteranopia 0       19 http://creativecommons.org/licenses/by-nc-sa/3.0/
+#2 113885        2 Deuteranopia 1      402 http://creativecommons.org/licenses/by-nc-sa/3.0/
+#3 114063        3 Deuteranopia 2      416 http://creativecommons.org/licenses/by-nc-sa/3.0/
+#4 113926        4 Deuteranopia 3      277 http://creativecommons.org/licenses/by-nc-sa/3.0/
+#5 113953        5 Deuteranopia 4      387 http://creativecommons.org/licenses/by-nc-sa/3.0/
+#6 114050        6 Deuteranopia 6      323 http://creativecommons.org/licenses/by-nc-sa/3.0/
+#7 114067        7 Deuteranopia 7      384 http://creativecommons.org/licenses/by-nc-sa/3.0/
+#8 114052        8 Deuteranopia 8       93 http://creativecommons.org/licenses/by-nc-sa/3.0/
+#                                                                   audio
+#1 https://mp3l.jamendo.com/?trackid=114069&format=mp31&from=app-77b5b682
+#2 https://mp3l.jamendo.com/?trackid=113885&format=mp31&from=app-77b5b682
+#3 https://mp3l.jamendo.com/?trackid=114063&format=mp31&from=app-77b5b682
+#4 https://mp3l.jamendo.com/?trackid=113926&format=mp31&from=app-77b5b682
+#5 https://mp3l.jamendo.com/?trackid=113953&format=mp31&from=app-77b5b682
+#6 https://mp3l.jamendo.com/?trackid=114050&format=mp31&from=app-77b5b682
+#7 https://mp3l.jamendo.com/?trackid=114067&format=mp31&from=app-77b5b682
+#8 https://mp3l.jamendo.com/?trackid=114052&format=mp31&from=app-77b5b682
+#                                         audiodownload
+#1 https://mp3d.jamendo.com/download/track/114069/mp32/
+#2 https://mp3d.jamendo.com/download/track/113885/mp32/
+#3 https://mp3d.jamendo.com/download/track/114063/mp32/
+#4 https://mp3d.jamendo.com/download/track/113926/mp32/
+#5 https://mp3d.jamendo.com/download/track/113953/mp32/
+#6 https://mp3d.jamendo.com/download/track/114050/mp32/
+#7 https://mp3d.jamendo.com/download/track/114067/mp32/
+#8 https://mp3d.jamendo.com/download/track/114052/mp32/
+```
+
+### Get information about a specific song:
+```{r, eval = FALSE}
+track <- getTrack(track_name = "Deuteranopia 0")
+#      id           name duration artist_id     artist_name          album_name album_id
+#1 114069 Deuteranopia 0       19      1510 Judas Priestley Deuteranopia Utopia    14866
+#                                      license_ccurl position releasedate
+#1 http://creativecommons.org/licenses/by-nc-sa/3.0/        1  2007-12-04
+#                                                                   audio
+#1 https://mp3l.jamendo.com/?trackid=114069&format=mp31&from=app-77b5b682
+#                                         audiodownload prourl                 shorturl
+#1 https://mp3d.jamendo.com/download/track/114069/mp32/        http://jamen.do/t/114069
+#                             shareurl
+#1 http://www.jamendo.com/track/114069
+```
