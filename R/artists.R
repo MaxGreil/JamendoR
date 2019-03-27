@@ -60,6 +60,7 @@ getArtists<-function(artist_ids, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
 
 getArtistTracks<-function(artist_id=NULL, artist_name=NULL, limit = 10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
   controlInputVariables(artist_id,artist_name)
+  limit <- controlLimit(limit)
   url <- 'https://api.jamendo.com/v3.0/artists/tracks/'
   if(is.null(artist_id)) {
     params = list(client_id = client_id,
@@ -91,6 +92,7 @@ getArtistTracks<-function(artist_id=NULL, artist_name=NULL, limit = 10, client_i
 
 getArtistAlbums<-function(artist_id=NULL, artist_name=NULL, limit = 10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
   controlInputVariables(artist_id,artist_name)
+  limit <- controlLimit(limit)
   url <- 'https://api.jamendo.com/v3.0/artists/albums/'
   if(is.null(artist_id)) {
     params = list(client_id = client_id,

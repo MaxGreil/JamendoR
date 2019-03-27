@@ -72,6 +72,12 @@ artist <- getArtist(artist_id = "1510")
 #1 1510 Judas Priestley http://myspace.com/judaspriestley 2006-03-21 http://jamen.do/a/1510
 #                            shareurl
 #1 http://www.jamendo.com/artist/1510
+
+info <- getArtistMusicinfo(artist_name = "Judas Priestley")
+#        tags
+#1     glitch
+#2 electronic
+#3    ambient
 ```
 
 ### Get information about albums available from a specific artist:
@@ -113,6 +119,10 @@ tracks <- getAlbumTracks(album_id = "14866")
 #6 https://mp3d.jamendo.com/download/track/114050/mp32/
 #7 https://mp3d.jamendo.com/download/track/114067/mp32/
 #8 https://mp3d.jamendo.com/download/track/114052/mp32/
+
+ids <- tracks$id
+reviews <- getReviewTracks(ids)
+# NULL
 ```
 
 ### Get information about a specific song:
