@@ -133,8 +133,15 @@ tracks <- getAlbumTracks(album_id = "14866")
 #7 https://mp3d.jamendo.com/download/track/114067/mp32/
 #8 https://mp3d.jamendo.com/download/track/114052/mp32/
 
+info <- getAlbumMusicinfo(album_id = "14866")
+#      tags
+#1   glitch
+#2  ambient
+#3  triphop
+#4 peaceful
+
 ids <- tracks$id
-reviews <- getReviewTracks(ids)
+reviews <- getReviewsTracks(ids)
 # NULL
 ```
 
