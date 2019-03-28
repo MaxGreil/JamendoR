@@ -148,10 +148,10 @@ track <- getTrack(track_name = "Deuteranopia 0")
 #1 http://www.jamendo.com/track/114069
 ```
 
-### Search Jamendo database for playlists with certain name
+### Search Jamendo database for playlists with certain name:
 
 ``` r
-playlists <- getPlaylistsNamesearch("namesearch", limit = 3)
+playlists <- getPlaylistsNamesearch("chill", limit = 3)
 #         id                      name creationdate user_id                        user_name
 #1 100086550 Ambiente, Lunge, Chillout   2014-12-03 4014817 mundofascinante.viajes@gmail.com
 #2    100268                   Chillin   2009-01-19  555416                         jdhall75
