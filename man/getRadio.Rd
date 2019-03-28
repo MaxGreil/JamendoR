@@ -2,7 +2,7 @@
 % Please edit documentation in R/radios.R
 \name{getRadio}
 \alias{getRadio}
-\title{This method returns the list of existing jamendo radios}
+\title{This method returns information about a jamendo radio}
 \usage{
 getRadio(radio_id = NULL, radio_name = NULL,
   client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
@@ -19,5 +19,5 @@ Returns a data frame which contains information about a radio.
 See \url{https://developer.jamendo.com/v3.0/radios} for more information.
 }
 \description{
-This method returns the list of existing jamendo radios. You can search for either a radio ID or a radio name.
+This method returns information about a jamendo radio. You can search for either a radio ID or a radio name.
 }

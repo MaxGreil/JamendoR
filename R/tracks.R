@@ -62,8 +62,8 @@ getTracks<-function(track_ids, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
 #' See \url{https://developer.jamendo.com/v3.0/tracks} for more information.
 #' @export
 
-
 getTracksTags<-function(tags, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
+  limit <- controlLimit(limit)
   url <- 'https://api.jamendo.com/v3.0/tracks/'
   params = list(client_id = client_id,
                 format = 'jsonpretty',
@@ -89,6 +89,7 @@ getTracksTags<-function(tags, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_I
 #' @export
 
 getTracksNamesearch<-function(namesearch, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
+  limit <- controlLimit(limit)
   url <- 'https://api.jamendo.com/v3.0/tracks/'
   params = list(client_id = client_id,
                 format = 'jsonpretty',
@@ -115,6 +116,7 @@ getTracksNamesearch<-function(namesearch, limit=10, client_id = Sys.getenv('JAME
 #' @export
 
 getTracksSimilar<-function(track_id, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
+  limit <- controlLimit(limit)
   url <- 'https://api.jamendo.com/v3.0/tracks/similar/tracks/'
   params = list(client_id = client_id,
                 format = 'jsonpretty',

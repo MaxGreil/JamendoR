@@ -37,7 +37,8 @@ getPlaylist<-function(playlist_id=NULL, playlist_name=NULL, client_id = Sys.gete
 #' See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
 #' @export
 
-getPlaylistsNamesearch<-function(namesearch, limit = 10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
+getPlaylistsNamesearch<-function(namesearch, limit = 10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')){
+  limit <- controlLimit(limit)
   url <- 'https://api.jamendo.com/v3.0/playlists/'
   params = list(client_id = client_id,
                 format = 'jsonpretty',

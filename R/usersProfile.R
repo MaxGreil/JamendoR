@@ -153,7 +153,7 @@ setUserFan<-function(token,artist_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID'
 #' See \url{https://developer.jamendo.com/v3.0/setuser/favourite} for more information.
 #' @export
 
-setUserFavorite<-function(token,track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
+setUserFavorite<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
   url <- 'https://api.jamendo.com/v3.0/setuser/favorite/'
   body <- list(client_id = client_id,
                format="jsonpretty",
@@ -171,7 +171,7 @@ setUserFavorite<-function(token,track_id, client_id = Sys.getenv('JAMENDO_CLIENT
 #' See \url{https://developer.jamendo.com/v3.0/setuser/like} for more information.
 #' @export
 
-setUserLike<-function(token,track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
+setUserLike<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
   url <- 'https://api.jamendo.com/v3.0/setuser/like/'
   body <- list(client_id = client_id,
                format="jsonpretty",
@@ -189,7 +189,7 @@ setUserLike<-function(token,track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID'
 #' See \url{https://developer.jamendo.com/v3.0/setuser/dislike} for more information.
 #' @export
 
-setUserDislike<-function(token,track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
+setUserDislike<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
   url <- 'https://api.jamendo.com/v3.0/setuser/dislike/'
   body <- list(client_id = client_id,
                format="jsonpretty",
@@ -207,7 +207,7 @@ setUserDislike<-function(token,track_id, client_id = Sys.getenv('JAMENDO_CLIENT_
 #' See \url{https://developer.jamendo.com/v3.0/setuser/myalbum} for more information.
 #' @export
 
-setUserMyalbum<-function(token,album_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
+setUserMyalbum<-function(token, album_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
   url <- 'https://api.jamendo.com/v3.0/setuser/myalbum/'
   body <- list(client_id = client_id,
                format="jsonpretty",

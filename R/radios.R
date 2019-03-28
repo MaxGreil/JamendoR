@@ -1,5 +1,5 @@
-#' @title This method returns the list of existing jamendo radios
-#' @description This method returns the list of existing jamendo radios. You can search for either a radio ID or a radio name.
+#' @title This method returns information about a jamendo radio
+#' @description This method returns information about a jamendo radio. You can search for either a radio ID or a radio name.
 #' @param radio_id Radio ID to seach for
 #' @param radio_name Radio name to seach for
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
