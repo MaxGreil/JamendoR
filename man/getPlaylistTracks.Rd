@@ -5,12 +5,14 @@
 \title{Get all tracks from a playlist}
 \usage{
 getPlaylistTracks(playlist_id = NULL, playlist_name = NULL,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+  limit = 10, client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
 }
 \arguments{
 \item{playlist_id}{Playlist ID to seach for}
 
 \item{playlist_name}{Playlist name to seach for}
+
+\item{limit}{Integer to set the number of displayed search results. Maximum value is 200.}
 
 \item{client_id}{Defaults to System Environment variable "JAMENDO_CLIENT_ID"}
 }

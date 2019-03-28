@@ -29,11 +29,11 @@ getPlaylist<-function(playlist_id=NULL, playlist_name=NULL, client_id = Sys.gete
   }
 }
 
-#' Search Jamendo database for playlists
+#' Search Jamendo database for playlists with certain name
 #' @param namesearch String to search for
 #' @param limit Integer to set the number of displayed search results. Maximum value is 200.
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
-#' @return Returns a data frame which contains information about a playlists.
+#' @return Returns a data frame which contains information about playlists with certain name.
 #' See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
 #' @export
 
@@ -81,13 +81,15 @@ getMyPlaylists<-function(token, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
 #' @description Get all tracks from a playlist. You can search for either a playlist ID or a playlist name.
 #' @param playlist_id Playlist ID to seach for
 #' @param playlist_name Playlist name to seach for
+#' @param limit Integer to set the number of displayed search results. Maximum value is 200.
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about all tracks from a playlist.
 #' See \url{https://developer.jamendo.com/v3.0/playlists/tracks} for more information.
 #' @export
 
-getPlaylistTracks<-function(playlist_id=NULL, playlist_name=NULL, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
+getPlaylistTracks<-function(playlist_id=NULL, playlist_name=NULL, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
   controlInputVariables(playlist_id,playlist_name)
+  limit <- controlLimit(limit)
   url <- 'https://api.jamendo.com/v3.0/playlists/tracks/'
   if(is.null(playlist_id)) {
     params = list(client_id = client_id,

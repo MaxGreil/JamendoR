@@ -2,7 +2,7 @@
 % Please edit documentation in R/reviews.R
 \name{getReviewsAlbumsUser}
 \alias{getReviewsAlbumsUser}
-\title{This method lets you filter and browse album reviews from a user}
+\title{This method lets you filter and browse album reviews from a specific user}
 \usage{
 getReviewsAlbumsUser(user_id, limit = 10,
   client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
@@ -15,9 +15,9 @@ getReviewsAlbumsUser(user_id, limit = 10,
 \item{client_id}{Defaults to System Environment variable "JAMENDO_CLIENT_ID"}
 }
 \value{
-Returns a data frame which contains reviews of the searched albums.
+Returns a data frame which contains reviews of the searched albums from a specific user.
 See \url{https://developer.jamendo.com/v3.0/reviews/albums} for more information.
 }
 \description{
-This method lets you filter and browse album reviews from a user
+This method lets you filter and browse album reviews from a specific user
 }

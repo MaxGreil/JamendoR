@@ -2,7 +2,7 @@
 % Please edit documentation in R/playlists.R
 \name{getPlaylistsNamesearch}
 \alias{getPlaylistsNamesearch}
-\title{Search Jamendo database for playlists}
+\title{Search Jamendo database for playlists with certain name}
 \usage{
 getPlaylistsNamesearch(namesearch, limit = 10,
   client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
@@ -15,9 +15,9 @@ getPlaylistsNamesearch(namesearch, limit = 10,
 \item{client_id}{Defaults to System Environment variable "JAMENDO_CLIENT_ID"}
 }
 \value{
-Returns a data frame which contains information about a playlists.
+Returns a data frame which contains information about playlists with certain name.
 See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
 }
 \description{
-Search Jamendo database for playlists
+Search Jamendo database for playlists with certain name
 }

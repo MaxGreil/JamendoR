@@ -147,3 +147,21 @@ track <- getTrack(track_name = "Deuteranopia 0")
 #                             shareurl
 #1 http://www.jamendo.com/track/114069
 ```
+
+### Search Jamendo database for playlists with certain name
+
+``` r
+playlists <- getPlaylistsNamesearch("namesearch", limit = 3)
+#         id                      name creationdate user_id                        user_name
+#1 100086550 Ambiente, Lunge, Chillout   2014-12-03 4014817 mundofascinante.viajes@gmail.com
+#2    100268                   Chillin   2009-01-19  555416                         jdhall75
+#3    100276                  chillout   2009-01-19   69982                           sleeva
+#                                                 zip                     shorturl
+#1 https://mp3d.jamendo.com/download/p100086550/mp32/ http://jamen.do/l/p100086550
+#2    https://mp3d.jamendo.com/download/p100268/mp32/    http://jamen.do/l/p100268
+#3    https://mp3d.jamendo.com/download/p100276/mp32/    http://jamen.do/l/p100276
+#                                shareurl
+#1 http://www.jamendo.com/list/p100086550
+#2    http://www.jamendo.com/list/p100268
+#3    http://www.jamendo.com/list/p100276
+```

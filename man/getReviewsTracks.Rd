@@ -15,7 +15,7 @@ getReviewsTracks(track_ids, limit = 10,
 \item{client_id}{Defaults to System Environment variable "JAMENDO_CLIENT_ID"}
 }
 \value{
-Returns a data frame which contains reviews of the searched albums.
+Returns a data frame which contains track reviews of the searched albums.
 See \url{https://developer.jamendo.com/v3.0/reviews/tracks} for more information.
 }
 \description{

@@ -22,15 +22,15 @@ getReviewsAlbums<-function(album_ids, limit=10, client_id = Sys.getenv('JAMENDO_
   }
 }
 
-#' This method lets you filter and browse album reviews from an artist
+#' This method lets you filter and browse album reviews for a specific artist
 #' @param artist_id Artist ID to seach for
 #' @param limit Integer to set the number of displayed search results. Maximum value is 200.
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
-#' @return Returns a data frame which contains reviews of the searched albums.
+#' @return Returns a data frame which contains reviews of the searched albums for a specific artist.
 #' See \url{https://developer.jamendo.com/v3.0/reviews/albums} for more information.
 #' @export
 
-getReviewsAlbumsArtist<-function(artist_id, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
+getReviewsArtistAlbums<-function(artist_id, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
   limit <- controlLimit(limit)
   url <- 'https://api.jamendo.com/v3.0/reviews/albums/'
   params = list(client_id = client_id,
@@ -46,11 +46,11 @@ getReviewsAlbumsArtist<-function(artist_id, limit=10, client_id = Sys.getenv('JA
   }
 }
 
-#' This method lets you filter and browse album reviews from a user
+#' This method lets you filter and browse album reviews from a specific user
 #' @param user_id User ID to seach for
 #' @param limit Integer to set the number of displayed search results. Maximum value is 200.
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
-#' @return Returns a data frame which contains reviews of the searched albums.
+#' @return Returns a data frame which contains reviews of the searched albums from a specific user.
 #' See \url{https://developer.jamendo.com/v3.0/reviews/albums} for more information.
 #' @export
 
@@ -74,7 +74,7 @@ getReviewsAlbumsUser<-function(user_id, limit=10, client_id = Sys.getenv('JAMEND
 #' @param track_ids List of album IDs to seach for
 #' @param limit Integer to set the number of displayed search results. Maximum value is 200.
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
-#' @return Returns a data frame which contains reviews of the searched albums.
+#' @return Returns a data frame which contains track reviews of the searched albums.
 #' See \url{https://developer.jamendo.com/v3.0/reviews/tracks} for more information.
 #' @export
 
