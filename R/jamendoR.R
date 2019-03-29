@@ -5,6 +5,7 @@
 #'
 #' @docType package
 #' @name jamendoR
+#' @import dplyr
 #' @importFrom dplyr %>%
 #' @importFrom stats setNames
 NULL
