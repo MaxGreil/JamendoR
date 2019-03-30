@@ -170,7 +170,7 @@ getArtistMusicinfo<-function(artist_id=NULL, artist_name=NULL, client_id = Sys.g
   }
   if(length(res$results) > 0) {
     tags<-jsonlite::fromJSON(jsonlite::toJSON(res))$results$musicinfo[[1]]
-    df <- setNames(data.frame(matrix(unlist(tags), nrow=length(tags[[1]]), byrow=T),stringsAsFactors=FALSE),"tags")
+    df <- stats::setNames(data.frame(matrix(unlist(tags), nrow=length(tags[[1]]), byrow=T),stringsAsFactors=FALSE),"tags")
     return(df)
   }
 }

@@ -5,9 +5,11 @@
 #'
 #' @docType package
 #' @name jamendoR
+#' @import httr
 #' @import dplyr
+#' @import jsonlite
+#' @import stats
 #' @importFrom dplyr %>%
-#' @importFrom stats setNames
 NULL
 
 ## quiets concerns of R CMD check re: the .'s that appear in pipelines
