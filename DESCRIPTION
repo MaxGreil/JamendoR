@@ -2,11 +2,16 @@ Package: JamendoR
 Type: Package
 Title: Access to Jamendo API via R
 Version: 0.1.0
-Author: Maximilian Greil <maximilian_greil@web.de>
-Maintainer: Maximilian Greil <maximilian_greil@web.de>
+Authors@R: c(person("Maximilian", "Greil", 
+                    role = c("aut", "cre"),
+                    email = "maximilian_greil@web.de"), 
+             person("Benedikt", "Greil",
+                    role = "aut",
+                    email = "grbene99@web.de"))
 Description: Provides an interface to Jamendo API.
 Depends: R (>= 3.3.0)
 Imports: httr,dplyr,jsonlite,stats
+Suggests: knitr
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: TRUE
