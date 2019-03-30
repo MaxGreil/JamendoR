@@ -5,10 +5,7 @@
 #'
 #' @docType package
 #' @name jamendoR
-#' @import httr
 #' @import dplyr
-#' @import jsonlite
-#' @import stats
 #' @importFrom dplyr %>%
 NULL
 
