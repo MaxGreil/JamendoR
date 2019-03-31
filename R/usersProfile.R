@@ -150,7 +150,7 @@ setUserFan<-function(token,artist_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID'
 #' @param token Your OAuth access token
 #' @param track_id Track ID of track you want to favourite
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
-#' See \url{https://developer.jamendo.com/v3.0/setuser/favourite} for more information.
+#' See \url{https://developer.jamendo.com/v3.0/setuser/favorite} for more information.
 #' @export
 
 setUserFavorite<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {

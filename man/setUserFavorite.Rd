@@ -13,7 +13,7 @@ setUserFavorite(token, track_id,
 \item{track_id}{Track ID of track you want to favourite}
 
 \item{client_id}{Defaults to System Environment variable "JAMENDO_CLIENT_ID"
-See \url{https://developer.jamendo.com/v3.0/setuser/favourite} for more information.}
+See \url{https://developer.jamendo.com/v3.0/setuser/favorite} for more information.}
 }
 \description{
 Add a given track to your preferites
