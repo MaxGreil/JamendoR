@@ -1,4 +1,4 @@
-Package: 'JamendoR'
+Package: JamendoR
 Type: Package
 Title: Access to 'Jamendo' API
 Version: 0.1.0
