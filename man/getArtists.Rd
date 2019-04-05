@@ -18,3 +18,10 @@ See \url{https://developer.jamendo.com/v3.0/artists} for more information.
 \description{
 Search Jamendo database for several artists
 }
+\examples{
+\dontrun{
+##Example
+ IDs <- c(1510,338873)
+ artists <- getArtists(IDs)
+}
+}

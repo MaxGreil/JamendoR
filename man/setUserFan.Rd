@@ -17,3 +17,10 @@ See \url{https://developer.jamendo.com/v3.0/setuser/fan} for more information.}
 \description{
 Become a fan of an artist
 }
+\examples{
+\dontrun{
+## Example
+ token <- jamendoOAuth(app_name="xxxx")
+ setUserFan(token)
+}
+}

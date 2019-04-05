@@ -5,6 +5,11 @@
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about an album.
 #' See \url{https://developer.jamendo.com/v3.0/albums} for more information.
+#' @examples \dontrun{
+#' ##Example
+#'  albumID <- getAlbum(album_id = "14866")
+#'  albumName <- getAlbum(album_name = "Deuteranopia Utopia")
+#' }
 #' @export
 
 getAlbum<-function(album_id=NULL, album_name=NULL, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -34,6 +39,11 @@ getAlbum<-function(album_id=NULL, album_name=NULL, client_id = Sys.getenv('JAMEN
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about several albums.
 #' See \url{https://developer.jamendo.com/v3.0/albums} for more information.
+#' @examples \dontrun{
+#' ##Example
+#'  IDs <- c(104336,124067)
+#'  albums <- getAlbums(IDs)
+#' }
 #' @export
 
 getAlbums<-function(album_ids, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {

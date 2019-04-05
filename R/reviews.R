@@ -4,6 +4,11 @@
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains reviews of the searched albums.
 #' See \url{https://developer.jamendo.com/v3.0/reviews/albums} for more information.
+#' @examples \dontrun{
+#' ##Example
+#'  IDs <- c(104336,124067)
+#'  reviews <- getReviewsAlbums(IDs)
+#' }
 #' @export
 
 getReviewsAlbums<-function(album_ids, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {

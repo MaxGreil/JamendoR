@@ -18,3 +18,10 @@ See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
 \description{
 Get your own playlists
 }
+\examples{
+\dontrun{
+##Example
+ token <- jamendoOAuth(app_name="xxxx")
+ playlists <- getMyPlaylists(token)
+}
+}

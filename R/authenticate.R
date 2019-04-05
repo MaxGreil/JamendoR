@@ -13,8 +13,8 @@
 #' @examples \dontrun{
 #' ## Example
 #'  my_oauth <- jamendoOAuth(app_name="xxxx")
-#'  save(my_oauth, file="my_oauth")
-#'  load("my_oauth")
+#'  filedir <- tempdir()
+#'  save(my_oauth, file=file.path(filedir, "my_oauth"))
 #' }
 #'
 #'
@@ -44,10 +44,9 @@ jamendoOAuth<-function(app_name, client_id = Sys.getenv('JAMENDO_CLIENT_ID'), cl
 #' @examples \dontrun{
 #' ## Example
 #'  my_oauth <- resfreshToken(my_oauth)
-#'  save(my_oauth, file="my_oauth")
-#'  load("my_oauth")
+#'  filedir <- tempdir()
+#'  save(my_oauth, file=file.path(filedir, "my_oauth"))
 #' }
-#'
 #'
 #'@export
 

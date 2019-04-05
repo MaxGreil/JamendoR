@@ -21,3 +21,10 @@ See \url{https://developer.jamendo.com/v3.0/albums} for more information.
 \description{
 Search Jamendo database for an album. You can search for either an album ID or an album name.
 }
+\examples{
+\dontrun{
+##Example
+ albumID <- getAlbum(album_id = "14866")
+ albumName <- getAlbum(album_name = "Deuteranopia Utopia")
+}
+}

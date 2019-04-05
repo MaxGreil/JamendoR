@@ -18,3 +18,10 @@ See \url{https://developer.jamendo.com/v3.0/albums} for more information.
 \description{
 Search Jamendo database for several albums
 }
+\examples{
+\dontrun{
+##Example
+ IDs <- c(104336,124067)
+ albums <- getAlbums(IDs)
+}
+}

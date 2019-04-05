@@ -21,3 +21,9 @@ See \url{https://developer.jamendo.com/v3.0/autocomplete} for more information.
 \description{
 Search Jamendo database for a string
 }
+\examples{
+\dontrun{
+##Example
+ result <- getAutocompleteSearch("Chill", limit=3)
+}
+}

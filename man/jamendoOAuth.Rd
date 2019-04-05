@@ -27,8 +27,8 @@ file in disk to be re-used in future sessions. This function relies on the
 \dontrun{
 ## Example
  my_oauth <- jamendoOAuth(app_name="xxxx")
- save(my_oauth, file="my_oauth")
- load("my_oauth")
+ filedir <- tempdir()
+ save(my_oauth, file=file.path(filedir, "my_oauth"))
 }
 
 

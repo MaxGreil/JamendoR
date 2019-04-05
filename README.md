@@ -31,8 +31,8 @@ Sys.setenv(JAMENDO_CLIENT_ID = 'xxxxxxxxxxxxxxxxxxxxx')
 Sys.setenv(JAMENDO_CLIENT_SECRET = 'xxxxxxxxxxxxxxxxxxxxx')
 
 token <- jamendoOAuth(app_name="xxxx")
-save(token, file="token")
-load("token")
+filedir <- tempdir()
+save(token file=file.path(filedir, "token"))
 ```
 
 #### Authorization code flow

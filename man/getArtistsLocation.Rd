@@ -23,3 +23,9 @@ See \url{https://developer.jamendo.com/v3.0/artists/locations} for more informat
 \description{
 This method let you select and filter geographical locations which artists have declared as reference for themselves
 }
+\examples{
+\dontrun{
+##Example
+ artists <- getArtistsLocation("GRC", limit=3)
+}
+}

@@ -5,6 +5,11 @@
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about a playlist.
 #' See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
+#' @examples \dontrun{
+#' ##Example
+#'  playlistID <- getPlaylist(playlist_id="100268")
+#'  playlistName <- getPlaylist(playlist_name="Chillin")
+#' }
 #' @export
 
 getPlaylist<-function(playlist_id=NULL, playlist_name=NULL, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -35,6 +40,10 @@ getPlaylist<-function(playlist_id=NULL, playlist_name=NULL, client_id = Sys.gete
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about playlists with certain name.
 #' See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
+#' @examples \dontrun{
+#' ##Example
+#'  playlists <- getPlaylistsNamesearch("chill", limit = 3)
+#' }
 #' @export
 
 getPlaylistsNamesearch<-function(namesearch, limit = 10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')){
@@ -58,6 +67,11 @@ getPlaylistsNamesearch<-function(namesearch, limit = 10, client_id = Sys.getenv(
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about your playlists.
 #' See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
+#' @examples \dontrun{
+#' ##Example
+#'  token <- jamendoOAuth(app_name="xxxx")
+#'  playlists <- getMyPlaylists(token)
+#' }
 #' @export
 
 getMyPlaylists<-function(token, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {

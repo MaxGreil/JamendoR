@@ -5,6 +5,11 @@
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about a track.
 #' See \url{https://developer.jamendo.com/v3.0/tracks} for more information.
+#' @examples \dontrun{
+#' ##Examples
+#'  trackID <- getTrack(track_id="114069")
+#'  trackName <- getTrack(track_name="Deuteranopia 0")
+#' }
 #' @export
 
 getTrack<-function(track_id=NULL, track_name=NULL, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -36,6 +41,11 @@ getTrack<-function(track_id=NULL, track_name=NULL, client_id = Sys.getenv('JAMEN
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about several tracks.
 #' See \url{https://developer.jamendo.com/v3.0/tracks} for more information.
+#' @examples \dontrun{
+#' ##Examples
+#'  IDs <- c(114069,113885)
+#'  tracks <- getTracks(IDs)
+#' }
 #' @export
 
 getTracks<-function(track_ids, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {

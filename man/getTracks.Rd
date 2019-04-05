@@ -18,3 +18,10 @@ See \url{https://developer.jamendo.com/v3.0/tracks} for more information.
 \description{
 Search Jamendo database for several tracks
 }
+\examples{
+\dontrun{
+##Examples
+ IDs <- c(114069,113885)
+ tracks <- getTracks(IDs)
+}
+}

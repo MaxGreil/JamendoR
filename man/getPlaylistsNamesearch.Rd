@@ -21,3 +21,9 @@ See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
 \description{
 Search Jamendo database for playlists with certain name
 }
+\examples{
+\dontrun{
+##Example
+ playlists <- getPlaylistsNamesearch("chill", limit = 3)
+}
+}

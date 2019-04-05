@@ -5,6 +5,11 @@
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about a radio.
 #' See \url{https://developer.jamendo.com/v3.0/radios} for more information.
+#' @examples \dontrun{
+#' ##Example
+#'  radioID <- getRadio(radio_id="1")
+#'  radioName <- getRadio(radio_name="bestof")
+#' }
 #' @export
 
 getRadio<-function(radio_id=NULL, radio_name=NULL, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {

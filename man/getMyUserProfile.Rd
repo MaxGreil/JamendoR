@@ -18,3 +18,10 @@ See \url{https://developer.jamendo.com/v3.0/users} for more information.
 \description{
 Get information about your user profile
 }
+\examples{
+\dontrun{
+##Example
+ token <- jamendoOAuth(app_name="xxxx")
+ user <- getUserProfile(token)
+}
+}
