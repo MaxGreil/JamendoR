@@ -21,3 +21,9 @@ See \url{https://developer.jamendo.com/v3.0/tracks} for more information.
 \description{
 Given the id of a Jamendo track, this function lets you find other similar Jamendo tracks.
 }
+\examples{
+\donttest{
+##Examples
+ tracks <- getTracksSimilar("114069",limit=3)
+}
+}

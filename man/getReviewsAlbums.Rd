@@ -22,9 +22,9 @@ See \url{https://developer.jamendo.com/v3.0/reviews/albums} for more information
 This method lets you filter and browse album reviews
 }
 \examples{
-\dontrun{
+\donttest{
 ##Example
  IDs <- c(104336,124067)
- reviews <- getReviewsAlbums(IDs)
+ reviews <- getReviewsAlbums(IDs,limit=3)
 }
 }

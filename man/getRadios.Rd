@@ -18,3 +18,9 @@ See \url{https://developer.jamendo.com/v3.0/radios} for more information.
 \description{
 This method returns the list of existing jamendo radios
 }
+\examples{
+\donttest{
+##Example
+ radios <- getRadios(limit=3)
+}
+}

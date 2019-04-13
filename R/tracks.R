@@ -5,7 +5,7 @@
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about a track.
 #' See \url{https://developer.jamendo.com/v3.0/tracks} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ##Examples
 #'  trackID <- getTrack(track_id="114069")
 #'  trackName <- getTrack(track_name="Deuteranopia 0")
@@ -41,7 +41,7 @@ getTrack<-function(track_id=NULL, track_name=NULL, client_id = Sys.getenv('JAMEN
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about several tracks.
 #' See \url{https://developer.jamendo.com/v3.0/tracks} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ##Examples
 #'  IDs <- c(114069,113885)
 #'  tracks <- getTracks(IDs)
@@ -70,6 +70,11 @@ getTracks<-function(track_ids, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about a track.
 #' See \url{https://developer.jamendo.com/v3.0/tracks} for more information.
+#' @examples \donttest{
+#' ##Examples
+#'  tags <- c("chill","ambient")
+#'  tracks <- getTracksTags(tags,limit=3)
+#' }
 #' @export
 
 getTracksTags<-function(tags, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -96,6 +101,10 @@ getTracksTags<-function(tags, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_I
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about a track.
 #' See \url{https://developer.jamendo.com/v3.0/tracks} for more information.
+#' @examples \donttest{
+#' ##Examples
+#'  tracks <- getTracksNamesearch("ambient",limit=3)
+#' }
 #' @export
 
 getTracksNamesearch<-function(namesearch, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -115,7 +124,6 @@ getTracksNamesearch<-function(namesearch, limit=10, client_id = Sys.getenv('JAME
   }
 }
 
-
 #' @title Search Jamendo database for a track
 #' @description Given the id of a Jamendo track, this function lets you find other similar Jamendo tracks.
 #' @param track_id Track ID to seach for
@@ -123,6 +131,10 @@ getTracksNamesearch<-function(namesearch, limit=10, client_id = Sys.getenv('JAME
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about a track.
 #' See \url{https://developer.jamendo.com/v3.0/tracks} for more information.
+#' @examples \donttest{
+#' ##Examples
+#'  tracks <- getTracksSimilar("114069",limit=3)
+#' }
 #' @export
 
 getTracksSimilar<-function(track_id, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {

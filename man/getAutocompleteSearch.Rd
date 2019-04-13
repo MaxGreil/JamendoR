@@ -22,7 +22,7 @@ See \url{https://developer.jamendo.com/v3.0/autocomplete} for more information.
 Search Jamendo database for a string
 }
 \examples{
-\dontrun{
+\donttest{
 ##Example
  result <- getAutocompleteSearch("Chill", limit=3)
 }

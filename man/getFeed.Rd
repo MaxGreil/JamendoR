@@ -18,3 +18,9 @@ See \url{https://developer.jamendo.com/v3.0/feeds} for more information.
 \description{
 This method returns the editorial feeds that you can find also on the Jamendo homepage.
 }
+\examples{
+\donttest{
+##Example
+ feed <- getFeed(limit=3)
+}
+}

@@ -21,3 +21,9 @@ See \url{https://developer.jamendo.com/v3.0/tracks} for more information.
 \description{
 Search Jamendo database for a track by name with namesearch.
 }
+\examples{
+\donttest{
+##Examples
+ tracks <- getTracksNamesearch("ambient",limit=3)
+}
+}

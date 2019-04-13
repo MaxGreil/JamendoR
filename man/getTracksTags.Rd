@@ -21,3 +21,10 @@ See \url{https://developer.jamendo.com/v3.0/tracks} for more information.
 \description{
 Search by one or more tags (genre, instrument, theme and nc tags).
 }
+\examples{
+\donttest{
+##Examples
+ tags <- c("chill","ambient")
+ tracks <- getTracksTags(tags,limit=3)
+}
+}

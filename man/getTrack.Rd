@@ -22,7 +22,7 @@ See \url{https://developer.jamendo.com/v3.0/tracks} for more information.
 Search Jamendo database for a track. You can search for either a track ID or a track name.
 }
 \examples{
-\dontrun{
+\donttest{
 ##Examples
  trackID <- getTrack(track_id="114069")
  trackName <- getTrack(track_name="Deuteranopia 0")

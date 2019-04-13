@@ -3,6 +3,10 @@
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about feeds from the Jamendo homepage.
 #' See \url{https://developer.jamendo.com/v3.0/feeds} for more information.
+#' @examples \donttest{
+#' ##Example
+#'  feed <- getFeed(limit=3)
+#' }
 #' @export
 
 getFeed<-function(limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')){

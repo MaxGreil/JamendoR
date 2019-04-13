@@ -4,10 +4,10 @@
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains reviews of the searched albums.
 #' See \url{https://developer.jamendo.com/v3.0/reviews/albums} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ##Example
 #'  IDs <- c(104336,124067)
-#'  reviews <- getReviewsAlbums(IDs)
+#'  reviews <- getReviewsAlbums(IDs,limit=3)
 #' }
 #' @export
 
@@ -33,6 +33,10 @@ getReviewsAlbums<-function(album_ids, limit=10, client_id = Sys.getenv('JAMENDO_
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains reviews of the searched albums for a specific artist.
 #' See \url{https://developer.jamendo.com/v3.0/reviews/albums} for more information.
+#' @examples \donttest{
+#' ##Example
+#'  reviews <- getReviewsArtistAlbums(1510,limit=3)
+#' }
 #' @export
 
 getReviewsArtistAlbums<-function(artist_id, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -57,6 +61,10 @@ getReviewsArtistAlbums<-function(artist_id, limit=10, client_id = Sys.getenv('JA
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains reviews of the searched albums from a specific user.
 #' See \url{https://developer.jamendo.com/v3.0/reviews/albums} for more information.
+#' @examples \donttest{
+#' ##Example
+#'  reviews <- getReviewsAlbumsUser(972174,limit=3)
+#' }
 #' @export
 
 getReviewsAlbumsUser<-function(user_id, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -81,6 +89,11 @@ getReviewsAlbumsUser<-function(user_id, limit=10, client_id = Sys.getenv('JAMEND
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains track reviews of the searched albums.
 #' See \url{https://developer.jamendo.com/v3.0/reviews/tracks} for more information.
+#' @examples \donttest{
+#' ##Example
+#'  IDs <- c(114069,113885)
+#'  reviews <- getReviewsTracks(IDs,limit=3)
+#' }
 #' @export
 
 getReviewsTracks<-function(track_ids, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {

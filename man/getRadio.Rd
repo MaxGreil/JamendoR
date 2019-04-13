@@ -22,7 +22,7 @@ See \url{https://developer.jamendo.com/v3.0/radios} for more information.
 This method returns information about a jamendo radio. You can search for either a radio ID or a radio name.
 }
 \examples{
-\dontrun{
+\donttest{
 ##Example
  radioID <- getRadio(radio_id="1")
  radioName <- getRadio(radio_name="bestof")

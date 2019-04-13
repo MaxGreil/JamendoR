@@ -21,3 +21,10 @@ See \url{https://developer.jamendo.com/v3.0/reviews/tracks} for more information
 \description{
 This method lets you filter and browse track reviews
 }
+\examples{
+\donttest{
+##Example
+ IDs <- c(114069,113885)
+ reviews <- getReviewsTracks(IDs,limit=3)
+}
+}

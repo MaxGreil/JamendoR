@@ -21,3 +21,9 @@ See \url{https://developer.jamendo.com/v3.0/reviews/albums} for more information
 \description{
 This method lets you filter and browse album reviews from a specific user
 }
+\examples{
+\donttest{
+##Example
+ reviews <- getReviewsAlbumsUser(972174,limit=3)
+}
+}

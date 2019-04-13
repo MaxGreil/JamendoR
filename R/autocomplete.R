@@ -4,7 +4,7 @@
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains found tracks, artists, albums and tags for a given string.
 #' See \url{https://developer.jamendo.com/v3.0/autocomplete} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ##Example
 #'  result <- getAutocompleteSearch("Chill", limit=3)
 #' }
