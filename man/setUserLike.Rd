@@ -17,3 +17,10 @@ See \url{https://developer.jamendo.com/v3.0/setuser/like} for more information.}
 \description{
 Like the track given by Track ID
 }
+\examples{
+\donttest{
+## Example
+ token <- jamendoOAuth(app_name="xxxx")
+ setUserLike(token)
+}
+}

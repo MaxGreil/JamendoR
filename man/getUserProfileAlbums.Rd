@@ -21,3 +21,10 @@ See \url{https://developer.jamendo.com/v3.0/users/albums} for more information.
 \description{
 Get albums added to myalbums. You can search for either a user ID or a user name.
 }
+\examples{
+\donttest{
+## Example
+ albumsFromName <- getUserProfileAlbums(user_name = "claudod")
+ albumsFromID <- getUserProfileAlbums(user_id = "972174")
+}
+}

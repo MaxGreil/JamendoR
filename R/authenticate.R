@@ -10,7 +10,7 @@
 #'@param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #'@param client_secret Defaults to System Environment variable "JAMENDO_CLIENT_SECRET"
 #'@return Returns an OAuth access token as environment
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ## Example
 #'  my_oauth <- jamendoOAuth(app_name="xxxx")
 #'  filedir <- tempdir()
@@ -41,7 +41,7 @@ jamendoOAuth<-function(app_name, client_id = Sys.getenv('JAMENDO_CLIENT_ID'), cl
 #'@param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #'@param client_secret Defaults to System Environment variable "JAMENDO_CLIENT_SECRET"
 #'@return Returns an OAuth access token as environment
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ## Example
 #'  my_oauth <- resfreshToken(my_oauth)
 #'  filedir <- tempdir()

@@ -19,7 +19,7 @@ See \url{https://developer.jamendo.com/v3.0/albums} for more information.
 Search Jamendo database for several albums
 }
 \examples{
-\dontrun{
+\donttest{
 ##Example
  IDs <- c(104336,124067)
  albums <- getAlbums(IDs)

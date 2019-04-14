@@ -5,7 +5,7 @@
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about a playlist.
 #' See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ##Example
 #'  playlistID <- getPlaylist(playlist_id="100268")
 #'  playlistName <- getPlaylist(playlist_name="Chillin")
@@ -40,7 +40,7 @@ getPlaylist<-function(playlist_id=NULL, playlist_name=NULL, client_id = Sys.gete
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about playlists with certain name.
 #' See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ##Example
 #'  playlists <- getPlaylistsNamesearch("chill", limit = 3)
 #' }
@@ -67,7 +67,7 @@ getPlaylistsNamesearch<-function(namesearch, limit = 10, client_id = Sys.getenv(
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about your playlists.
 #' See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ##Example
 #'  token <- jamendoOAuth(app_name="xxxx")
 #'  playlists <- getMyPlaylists(token)
@@ -99,6 +99,11 @@ getMyPlaylists<-function(token, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about all tracks from a playlist.
 #' See \url{https://developer.jamendo.com/v3.0/playlists/tracks} for more information.
+#' @examples \donttest{
+#' ##Example
+#'  tracksFromID <- getPlaylistTracks(playlist_id="100268")
+#'  tracksFromName <- getPlaylistTracks(playlist_name="Chillin")
+#' }
 #' @export
 
 getPlaylistTracks<-function(playlist_id=NULL, playlist_name=NULL, limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {

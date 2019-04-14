@@ -24,7 +24,7 @@ file in disk to be re-used in future sessions. This function relies on the
 \code{httr} package to refresh the OAuth token
 }
 \examples{
-\dontrun{
+\donttest{
 ## Example
  my_oauth <- resfreshToken(my_oauth)
  filedir <- tempdir()

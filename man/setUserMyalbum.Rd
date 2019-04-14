@@ -18,3 +18,10 @@ See \url{https://developer.jamendo.com/v3.0/setuser/myalbum} for more informatio
 \description{
 Add album to your list of favorite albums myalbums
 }
+\examples{
+\donttest{
+## Example
+ token <- jamendoOAuth(app_name="xxxx")
+ setUserMyalbum(token)
+}
+}

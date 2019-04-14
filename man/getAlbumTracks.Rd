@@ -21,3 +21,10 @@ See \url{https://developer.jamendo.com/v3.0/albums/tracks} for more information.
 \description{
 Get tracks from an album. You can search for either an album ID or an album name.
 }
+\examples{
+\donttest{
+##Example
+ tracksFromID <- getAlbumTracks(album_id = "14866")
+ tracksFromName <- getAlbumTracks(album_name = "Deuteranopia Utopia")
+}
+}

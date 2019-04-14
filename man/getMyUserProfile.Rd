@@ -19,7 +19,7 @@ See \url{https://developer.jamendo.com/v3.0/users} for more information.
 Get information about your user profile
 }
 \examples{
-\dontrun{
+\donttest{
 ##Example
  token <- jamendoOAuth(app_name="xxxx")
  user <- getUserProfile(token)

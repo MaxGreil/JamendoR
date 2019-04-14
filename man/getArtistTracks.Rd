@@ -23,3 +23,10 @@ See \url{https://developer.jamendo.com/v3.0/artists/tracks} for more information
 \description{
 Search Jamendo database for an artist. You can search for either an artist ID or an artist name.
 }
+\examples{
+\donttest{
+##Example
+ tracksFromID <- getArtistTracks(artist_id="1510",limit=3)
+ tracksFromName <- getArtistTracks(artist_name="Judas Priestley",limit=3)
+}
+}

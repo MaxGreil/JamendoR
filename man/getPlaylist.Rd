@@ -22,7 +22,7 @@ See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
 Search Jamendo database for a playlist. You can search for either a playlist ID or a playlist name.
 }
 \examples{
-\dontrun{
+\donttest{
 ##Example
  playlistID <- getPlaylist(playlist_id="100268")
  playlistName <- getPlaylist(playlist_name="Chillin")

@@ -22,7 +22,7 @@ See \url{https://developer.jamendo.com/v3.0/artists} for more information.
 Search Jamendo database for an artist. You can search for either an artist ID or an artist name.
 }
 \examples{
-\dontrun{
+\donttest{
 ##Example
  artistID <- getArtist(artist_id="1510")
  artistName <- getArtist(artist_name="Judas Priestley")

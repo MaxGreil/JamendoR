@@ -19,3 +19,9 @@ See \url{https://developer.jamendo.com/v3.0/users/tracks} for more information.
 \description{
 Get tracks a user has liked, added to favorite or reviewed
 }
+\examples{
+\donttest{
+## Example
+ tracks <- getUserProfileTracks("972174")
+}
+}

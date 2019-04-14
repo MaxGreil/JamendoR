@@ -18,3 +18,10 @@ See \url{https://developer.jamendo.com/v3.0/setuser/favorite} for more informati
 \description{
 Add a given track to your preferites
 }
+\examples{
+\donttest{
+## Example
+ token <- jamendoOAuth(app_name="xxxx")
+ setUserFavorite(token)
+}
+}

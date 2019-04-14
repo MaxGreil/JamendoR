@@ -24,7 +24,7 @@ file in disk to be re-used in future sessions. This function relies on the
 \code{httr} package to create the OAuth token
 }
 \examples{
-\dontrun{
+\donttest{
 ## Example
  my_oauth <- jamendoOAuth(app_name="xxxx")
  filedir <- tempdir()

@@ -21,3 +21,10 @@ See \url{https://developer.jamendo.com/v3.0/albums/musicinfo} for more informati
 \description{
 Get tag list of an album. You can search for either an album ID or an album name.
 }
+\examples{
+\donttest{
+##Example
+ tagsFromID <- getAlbumMusicinfo(album_id = "14866")
+ tagsFromName <- getAlbumMusicinfo(album_name = "Deuteranopia Utopia")
+}
+}

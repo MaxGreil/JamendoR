@@ -5,7 +5,7 @@
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about an artist.
 #' See \url{https://developer.jamendo.com/v3.0/artists} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ##Example
 #'  artistID <- getArtist(artist_id="1510")
 #'  artistName <- getArtist(artist_name="Judas Priestley")
@@ -38,7 +38,7 @@ getArtist<-function(artist_id=NULL, artist_name=NULL, client_id = Sys.getenv('JA
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about several albums.
 #' See \url{https://developer.jamendo.com/v3.0/artists} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ##Example
 #'  IDs <- c(1510,338873)
 #'  artists <- getArtists(IDs)
@@ -66,6 +66,11 @@ getArtists<-function(artist_ids, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about tracks from an artist.
 #' See \url{https://developer.jamendo.com/v3.0/artists/tracks} for more information.
+#' @examples \donttest{
+#' ##Example
+#'  tracksFromID <- getArtistTracks(artist_id="1510",limit=3)
+#'  tracksFromName <- getArtistTracks(artist_name="Judas Priestley",limit=3)
+#' }
 #' @export
 
 getArtistTracks<-function(artist_id=NULL, artist_name=NULL, limit = 10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -98,6 +103,11 @@ getArtistTracks<-function(artist_id=NULL, artist_name=NULL, limit = 10, client_i
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about albums from an artist.
 #' See \url{https://developer.jamendo.com/v3.0/artists/albums} for more information.
+#' @examples \donttest{
+#' ##Example
+#'  albumsFromID <- getArtistAlbums(artist_id="1510",limit=3)
+#'  albumsFromName <- getArtistAlbums(artist_name="Judas Priestley",limit=3)
+#' }
 #' @export
 
 getArtistAlbums<-function(artist_id=NULL, artist_name=NULL, limit = 10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -129,7 +139,7 @@ getArtistAlbums<-function(artist_id=NULL, artist_name=NULL, limit = 10, client_i
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about artist from a certain location.
 #' See \url{https://developer.jamendo.com/v3.0/artists/locations} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ##Example
 #'  artists <- getArtistsLocation("GRC", limit=3)
 #' }
@@ -166,6 +176,11 @@ getArtistsLocation<-function(location, city=NULL, limit=10, client_id = Sys.gete
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains tag list of an artist.
 #' See \url{https://developer.jamendo.com/v3.0/artists/musicinfo} for more information.
+#' @examples \donttest{
+#' ##Example
+#'  tagsFromID <- getArtistMusicinfo(artist_id="1510",limit=3)
+#'  tagsFromName <- getArtistMusicinfo(artist_name="Judas Priestley",limit=3)
+#' }
 #' @export
 
 getArtistMusicinfo<-function(artist_id=NULL, artist_name=NULL, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {

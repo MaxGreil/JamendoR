@@ -21,3 +21,10 @@ See \url{https://developer.jamendo.com/v3.0/artists/musicinfo} for more informat
 \description{
 Get tag list of an artist. You can search for either an artist ID or an artist name.
 }
+\examples{
+\donttest{
+##Example
+ tagsFromID <- getArtistMusicinfo(artist_id="1510",limit=3)
+ tagsFromName <- getArtistMusicinfo(artist_name="Judas Priestley",limit=3)
+}
+}

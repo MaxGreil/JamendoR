@@ -5,7 +5,7 @@
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about an album.
 #' See \url{https://developer.jamendo.com/v3.0/albums} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ##Example
 #'  albumID <- getAlbum(album_id = "14866")
 #'  albumName <- getAlbum(album_name = "Deuteranopia Utopia")
@@ -39,7 +39,7 @@ getAlbum<-function(album_id=NULL, album_name=NULL, client_id = Sys.getenv('JAMEN
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about several albums.
 #' See \url{https://developer.jamendo.com/v3.0/albums} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ##Example
 #'  IDs <- c(104336,124067)
 #'  albums <- getAlbums(IDs)
@@ -67,6 +67,11 @@ getAlbums<-function(album_ids, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about tracks from an album.
 #' See \url{https://developer.jamendo.com/v3.0/albums/tracks} for more information.
+#' @examples \donttest{
+#' ##Example
+#'  tracksFromID <- getAlbumTracks(album_id = "14866")
+#'  tracksFromName <- getAlbumTracks(album_name = "Deuteranopia Utopia")
+#' }
 #' @export
 
 getAlbumTracks<-function(album_id=NULL, album_name=NULL, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -96,6 +101,11 @@ getAlbumTracks<-function(album_id=NULL, album_name=NULL, client_id = Sys.getenv(
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains tag list of an album.
 #' See \url{https://developer.jamendo.com/v3.0/albums/musicinfo} for more information.
+#' @examples \donttest{
+#' ##Example
+#'  tagsFromID <- getAlbumMusicinfo(album_id = "14866")
+#'  tagsFromName <- getAlbumMusicinfo(album_name = "Deuteranopia Utopia")
+#' }
 #' @export
 
 getAlbumMusicinfo<-function(album_id=NULL, album_name=NULL, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {

@@ -22,7 +22,7 @@ See \url{https://developer.jamendo.com/v3.0/users} for more information.
 Search Jamendo database for a user. You can search for either a user ID or a user name.
 }
 \examples{
-\dontrun{
+\donttest{
 ## Example
  userName <- getUserProfile(user_name = "claudod")
  userID <- getUserProfile(user_id = "972174")

@@ -18,3 +18,10 @@ See \url{https://developer.jamendo.com/v3.0/setuser/dislike} for more informatio
 \description{
 Dislike the track given by Track ID
 }
+\examples{
+\donttest{
+## Example
+ token <- jamendoOAuth(app_name="xxxx")
+ setUserDislike(token)
+}
+}

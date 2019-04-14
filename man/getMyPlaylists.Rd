@@ -19,7 +19,7 @@ See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
 Get your own playlists
 }
 \examples{
-\dontrun{
+\donttest{
 ##Example
  token <- jamendoOAuth(app_name="xxxx")
  playlists <- getMyPlaylists(token)

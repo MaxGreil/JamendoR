@@ -5,7 +5,7 @@
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about a user.
 #' See \url{https://developer.jamendo.com/v3.0/users} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ## Example
 #'  userName <- getUserProfile(user_name = "claudod")
 #'  userID <- getUserProfile(user_id = "972174")
@@ -38,7 +38,7 @@ getUserProfile<-function(user_id = NULL, user_name = NULL, client_id = Sys.geten
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains information about your user profile.
 #' See \url{https://developer.jamendo.com/v3.0/users} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ##Example
 #'  token <- jamendoOAuth(app_name="xxxx")
 #'  user <- getUserProfile(token)
@@ -68,6 +68,11 @@ getMyUserProfile<-function(token, client_id = Sys.getenv('JAMENDO_CLIENT_ID')){
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains artists a user is a fan of.
 #' See \url{https://developer.jamendo.com/v3.0/users/artists} for more information.
+#' @examples \donttest{
+#' ## Example
+#'  artistsFromName <- getUserProfileArtists(user_name = "claudod")
+#'  artistsFromID <- getUserProfileArtists(user_id = "972174")
+#' }
 #' @export
 
 getUserProfileArtists<-function(user_id = NULL, user_name = NULL, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -97,6 +102,11 @@ getUserProfileArtists<-function(user_id = NULL, user_name = NULL, client_id = Sy
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains albums a user added to myalbums.
 #' See \url{https://developer.jamendo.com/v3.0/users/albums} for more information.
+#' @examples \donttest{
+#' ## Example
+#'  albumsFromName <- getUserProfileAlbums(user_name = "claudod")
+#'  albumsFromID <- getUserProfileAlbums(user_id = "972174")
+#' }
 #' @export
 
 getUserProfileAlbums<-function(user_id = NULL, user_name = NULL, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -124,6 +134,10 @@ getUserProfileAlbums<-function(user_id = NULL, user_name = NULL, client_id = Sys
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' @return Returns a data frame which contains tracks a user has liked, added to favorite or reviewed.
 #' See \url{https://developer.jamendo.com/v3.0/users/tracks} for more information.
+#' @examples \donttest{
+#' ## Example
+#'  tracks <- getUserProfileTracks("972174")
+#' }
 #' @export
 
 getUserProfileTracks<-function(user_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -143,7 +157,7 @@ getUserProfileTracks<-function(user_id, client_id = Sys.getenv('JAMENDO_CLIENT_I
 #' @param artist_id Artist ID of artist you want to become a fan of
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' See \url{https://developer.jamendo.com/v3.0/setuser/fan} for more information.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' ## Example
 #'  token <- jamendoOAuth(app_name="xxxx")
 #'  setUserFan(token)
@@ -166,6 +180,11 @@ setUserFan<-function(token,artist_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID'
 #' @param track_id Track ID of track you want to favourite
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' See \url{https://developer.jamendo.com/v3.0/setuser/favorite} for more information.
+#' @examples \donttest{
+#' ## Example
+#'  token <- jamendoOAuth(app_name="xxxx")
+#'  setUserFavorite(token)
+#' }
 #' @export
 
 setUserFavorite<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -184,6 +203,11 @@ setUserFavorite<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIEN
 #' @param track_id Track ID of track you want to like
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' See \url{https://developer.jamendo.com/v3.0/setuser/like} for more information.
+#' @examples \donttest{
+#' ## Example
+#'  token <- jamendoOAuth(app_name="xxxx")
+#'  setUserLike(token)
+#' }
 #' @export
 
 setUserLike<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -202,6 +226,11 @@ setUserLike<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID
 #' @param track_id Track ID of rtrack you want to dislike
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' See \url{https://developer.jamendo.com/v3.0/setuser/dislike} for more information.
+#' @examples \donttest{
+#' ## Example
+#'  token <- jamendoOAuth(app_name="xxxx")
+#'  setUserDislike(token)
+#' }
 #' @export
 
 setUserDislike<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {
@@ -220,6 +249,11 @@ setUserDislike<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT
 #' @param album_id Album ID of album you want to add to list myalbums
 #' @param client_id Defaults to System Environment variable "JAMENDO_CLIENT_ID"
 #' See \url{https://developer.jamendo.com/v3.0/setuser/myalbum} for more information.
+#' @examples \donttest{
+#' ## Example
+#'  token <- jamendoOAuth(app_name="xxxx")
+#'  setUserMyalbum(token)
+#' }
 #' @export
 
 setUserMyalbum<-function(token, album_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID')) {

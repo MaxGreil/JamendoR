@@ -21,3 +21,10 @@ See \url{https://developer.jamendo.com/v3.0/users/artists} for more information.
 \description{
 Get artists a user is a fan of. You can search for either a user ID or a user name.
 }
+\examples{
+\donttest{
+## Example
+ artistsFromName <- getUserProfileArtists(user_name = "claudod")
+ artistsFromID <- getUserProfileArtists(user_id = "972174")
+}
+}

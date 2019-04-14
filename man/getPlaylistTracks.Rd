@@ -23,3 +23,10 @@ See \url{https://developer.jamendo.com/v3.0/playlists/tracks} for more informati
 \description{
 Get all tracks from a playlist. You can search for either a playlist ID or a playlist name.
 }
+\examples{
+\donttest{
+##Example
+ tracksFromID <- getPlaylistTracks(playlist_id="100268")
+ tracksFromName <- getPlaylistTracks(playlist_name="Chillin")
+}
+}
