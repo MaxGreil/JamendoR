@@ -13,6 +13,12 @@ JamendoR is a R wrapper for pulling track audio features and other information f
 Installation
 ------------
 
+CRAN Version 0.1.0 (recommended)
+
+``` r
+install.packages('JamendoR')
+```
+
 Development version
 
 ``` r
