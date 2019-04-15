@@ -8,7 +8,7 @@ JamendoR
 Overview
 --------
 
-JamendoR is a R wrapper for pulling track audio features and other information from Jamendo's Web API. You can pull song and playlist information for a given Jamendo User (including yourself!) or enter an artist's -, album's -, or track's name and retrieve the available information in seconds.
+JamendoR is a R wrapper for pulling track audio features and other information from Jamendo's Web API. You can pull song and playlist information for a given Jamendo user (including yourself!) or enter an artist's -, album's -, or track's name and retrieve the available information in seconds.
 
 Installation
 ------------
@@ -32,7 +32,7 @@ Sys.setenv(JAMENDO_CLIENT_SECRET = 'xxxxxxxxxxxxxxxxxxxxx')
 
 token <- jamendoOAuth(app_name="xxxx")
 filedir <- tempdir()
-save(token file=file.path(filedir, "token"))
+save(token, file=file.path(filedir, "token"))
 ```
 
 #### Authorization code flow
