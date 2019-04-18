@@ -21,6 +21,6 @@ Like the track given by Track ID
 \donttest{
 ## Example
  token <- jamendoOAuth(app_name="xxxx")
- setUserLike(token)
+ setUserLike(token, "114069")
 }
 }

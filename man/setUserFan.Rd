@@ -21,6 +21,6 @@ Become a fan of an artist
 \donttest{
 ## Example
  token <- jamendoOAuth(app_name="xxxx")
- setUserFan(token)
+ setUserFan(token, "1510")
 }
 }

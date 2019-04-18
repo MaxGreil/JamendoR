@@ -22,6 +22,6 @@ Add album to your list of favorite albums myalbums
 \donttest{
 ## Example
  token <- jamendoOAuth(app_name="xxxx")
- setUserMyalbum(token)
+ setUserMyalbum(token, "14866")
 }
 }

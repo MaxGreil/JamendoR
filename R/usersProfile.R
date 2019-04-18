@@ -160,7 +160,7 @@ getUserProfileTracks<-function(user_id, client_id = Sys.getenv('JAMENDO_CLIENT_I
 #' @examples \donttest{
 #' ## Example
 #'  token <- jamendoOAuth(app_name="xxxx")
-#'  setUserFan(token)
+#'  setUserFan(token, "1510")
 #' }
 #' @export
 
@@ -183,7 +183,7 @@ setUserFan<-function(token,artist_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID'
 #' @examples \donttest{
 #' ## Example
 #'  token <- jamendoOAuth(app_name="xxxx")
-#'  setUserFavorite(token)
+#'  setUserFavorite(token, "114069")
 #' }
 #' @export
 
@@ -206,7 +206,7 @@ setUserFavorite<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIEN
 #' @examples \donttest{
 #' ## Example
 #'  token <- jamendoOAuth(app_name="xxxx")
-#'  setUserLike(token)
+#'  setUserLike(token, "114069")
 #' }
 #' @export
 
@@ -229,7 +229,7 @@ setUserLike<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID
 #' @examples \donttest{
 #' ## Example
 #'  token <- jamendoOAuth(app_name="xxxx")
-#'  setUserDislike(token)
+#'  setUserDislike(token, "114069")
 #' }
 #' @export
 
@@ -252,7 +252,7 @@ setUserDislike<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT
 #' @examples \donttest{
 #' ## Example
 #'  token <- jamendoOAuth(app_name="xxxx")
-#'  setUserMyalbum(token)
+#'  setUserMyalbum(token, "14866")
 #' }
 #' @export
 

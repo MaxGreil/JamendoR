@@ -22,6 +22,6 @@ Dislike the track given by Track ID
 \donttest{
 ## Example
  token <- jamendoOAuth(app_name="xxxx")
- setUserDislike(token)
+ setUserDislike(token, "114069")
 }
 }

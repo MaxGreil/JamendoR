@@ -1,17 +1,22 @@
 
-[![Travis-CI Build Status](https://travis-ci.org/MaxGreil/JamendoR.svg?branch=master)](https://travis-ci.org/MaxGreil/JamendoR)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/JamendoR?color=brightgreen)](https://cran.r-project.org/package=JamendoR)
+![](http://cranlogs.r-pkg.org/badges/JamendoR?color=brightgreen)
+[![Travis-CI Build
+Status](https://travis-ci.org/MaxGreil/JamendoR.svg?branch=master)](https://travis-ci.org/MaxGreil/JamendoR)
 
-JamendoR
-========
+# JamendoR
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-Overview
---------
 
-JamendoR is a R wrapper for pulling track audio features and other information from Jamendo's Web API. You can pull song and playlist information for a given Jamendo user (including yourself!) or enter an artist's -, album's -, or track's name and retrieve the available information in seconds.
+## Overview
 
-Installation
-------------
+JamendoR is a R wrapper for pulling track audio features and other
+information from Jamendo’s Web API. You can pull song and playlist
+information for a given Jamendo user (including yourself\!) or enter an
+artist’s -, album’s -, or track’s name and retrieve the available
+information in seconds.
+
+## Installation
 
 CRAN Version 0.1.0 (recommended)
 
@@ -25,12 +30,19 @@ Development version
 devtools::install_github('MaxGreil/JamendoR')
 ```
 
-Authentication
---------------
+## Authentication
 
-First, set up an account with Jamendo to access their Web API [here](https://devportal.jamendo.com/signup). This will give you your `Client ID` and `Client Secret`. Once you have those, you can pull your access token into R with `jamendoOAuth(app_name)`.
+First, set up an account with Jamendo to access their Web API
+[here](https://devportal.jamendo.com/signup). This will give you your
+`Client ID` and `Client Secret`. Once you have those, you can pull your
+access token into R with `jamendoOAuth(app_name)`.
 
-The easiest way to authenticate is to set your credentials to the System Environment variables `JAMENDO_CLIENT_ID` and `JAMENDO_CLIENT_SECRET`. The default arguments to `jamendoOAuth(app_name)` (and all other functions in this package) will refer to those. Alternatively, you can set them manually and make sure to explicitly refer to your access token in each subsequent function call.
+The easiest way to authenticate is to set your credentials to the System
+Environment variables `JAMENDO_CLIENT_ID` and `JAMENDO_CLIENT_SECRET`.
+The default arguments to `jamendoOAuth(app_name)` (and all other
+functions in this package) will refer to those. Alternatively, you can
+set them manually and make sure to explicitly refer to your access token
+in each subsequent function call.
 
 ``` r
 Sys.setenv(JAMENDO_CLIENT_ID = 'xxxxxxxxxxxxxxxxxxxxx')
@@ -43,12 +55,16 @@ save(token, file=file.path(filedir, "token"))
 
 #### Authorization code flow
 
-For certain functions and applications, you'll need to be logged in. To do this, your Jamendo application needs to have a callback url. You can set this to whatever you want, but a good default option is `http://localhost:1410/` (see image below). For more information on authorization, visit the offical [Jamendo Developer Guide](https://developer.jamendo.com/v3.0/authentication).
+For certain functions and applications, you’ll need to be logged in. To
+do this, your Jamendo application needs to have a callback url. You can
+set this to whatever you want, but a good default option is
+`http://localhost:1410/` (see image below). For more information on
+authorization, visit the offical [Jamendo Developer
+Guide](https://developer.jamendo.com/v3.0/authentication).
 
 <img src="man/figures/JamendoR_auth_screenshot.PNG" width="50%" />
 
-Usage
------
+## Usage
 
 ### Get information about a specific user:
 
