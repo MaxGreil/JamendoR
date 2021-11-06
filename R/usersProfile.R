@@ -164,7 +164,7 @@ getUserProfileTracks<-function(user_id, client_id = Sys.getenv('JAMENDO_CLIENT_I
 #' ## Example
 #'  app_name = ""
 #'  if(app_name != "") {
-#'   token <- jamendoOAuth(app_name="xxxx")
+#'   token <- jamendoOAuth(app_name=app_name)
 #'   setUserFan(token, "1510")
 #'  }
 #' }
@@ -190,7 +190,7 @@ setUserFan<-function(token,artist_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID'
 #' ## Example
 #'  app_name = ""
 #'  if(app_name != "") {
-#'   token <- jamendoOAuth(app_name="xxxx")
+#'   token <- jamendoOAuth(app_name=app_name)
 #'   setUserFavorite(token, "114069")
 #'  }
 #' }
@@ -216,7 +216,7 @@ setUserFavorite<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIEN
 #' ## Example
 #'  app_name = ""
 #'  if(app_name != "") {
-#'   token <- jamendoOAuth(app_name="xxxx")
+#'   token <- jamendoOAuth(app_name=app_name)
 #'   setUserLike(token, "114069")
 #'  }
 #' }
@@ -242,7 +242,7 @@ setUserLike<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID
 #' ## Example
 #'  app_name = ""
 #'  if(app_name != "") {
-#'   token <- jamendoOAuth(app_name="xxxx")
+#'   token <- jamendoOAuth(app_name=app_name)
 #'   setUserDislike(token, "114069")
 #'  }
 #' }
@@ -268,7 +268,7 @@ setUserDislike<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT
 #' ## Example
 #'  app_name = ""
 #'  if(app_name != "") {
-#'   token <- jamendoOAuth(app_name="xxxx")
+#'   token <- jamendoOAuth(app_name=app_name)
 #'   setUserMyalbum(token, "14866")
 #'  }
 #' }
