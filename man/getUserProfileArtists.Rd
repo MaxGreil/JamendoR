@@ -4,8 +4,11 @@
 \alias{getUserProfileArtists}
 \title{Get artists a user is a fan of}
 \usage{
-getUserProfileArtists(user_id = NULL, user_name = NULL,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getUserProfileArtists(
+  user_id = NULL,
+  user_name = NULL,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{user_id}{User ID to seach for}

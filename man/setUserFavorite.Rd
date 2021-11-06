@@ -4,8 +4,7 @@
 \alias{setUserFavorite}
 \title{Add a given track to your preferites}
 \usage{
-setUserFavorite(token, track_id,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+setUserFavorite(token, track_id, client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
 }
 \arguments{
 \item{token}{Your OAuth access token}

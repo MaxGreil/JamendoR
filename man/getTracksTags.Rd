@@ -4,8 +4,7 @@
 \alias{getTracksTags}
 \title{Search Jamendo database for a track}
 \usage{
-getTracksTags(tags, limit = 10,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getTracksTags(tags, limit = 10, client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
 }
 \arguments{
 \item{tags}{Tags to seach for (genre, instrument, theme and nc tags)}

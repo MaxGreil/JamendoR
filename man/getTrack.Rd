@@ -4,8 +4,11 @@
 \alias{getTrack}
 \title{Search Jamendo database for a track}
 \usage{
-getTrack(track_id = NULL, track_name = NULL,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getTrack(
+  track_id = NULL,
+  track_name = NULL,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{track_id}{Track ID to seach for}

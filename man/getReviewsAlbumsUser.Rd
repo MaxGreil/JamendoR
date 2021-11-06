@@ -4,8 +4,11 @@
 \alias{getReviewsAlbumsUser}
 \title{This method lets you filter and browse album reviews from a specific user}
 \usage{
-getReviewsAlbumsUser(user_id, limit = 10,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getReviewsAlbumsUser(
+  user_id,
+  limit = 10,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{user_id}{User ID to seach for}

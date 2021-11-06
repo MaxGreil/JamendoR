@@ -4,8 +4,11 @@
 \alias{getAlbum}
 \title{Search Jamendo database for an album}
 \usage{
-getAlbum(album_id = NULL, album_name = NULL,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getAlbum(
+  album_id = NULL,
+  album_name = NULL,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{album_id}{Album ID to seach for}

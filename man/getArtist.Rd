@@ -4,8 +4,11 @@
 \alias{getArtist}
 \title{Search Jamendo database for an artist}
 \usage{
-getArtist(artist_id = NULL, artist_name = NULL,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getArtist(
+  artist_id = NULL,
+  artist_name = NULL,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{artist_id}{Artist ID to seach for}

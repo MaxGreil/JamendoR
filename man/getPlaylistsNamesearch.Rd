@@ -4,8 +4,11 @@
 \alias{getPlaylistsNamesearch}
 \title{Search Jamendo database for playlists with certain name}
 \usage{
-getPlaylistsNamesearch(namesearch, limit = 10,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getPlaylistsNamesearch(
+  namesearch,
+  limit = 10,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{namesearch}{String to search for}

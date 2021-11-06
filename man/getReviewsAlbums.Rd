@@ -4,8 +4,11 @@
 \alias{getReviewsAlbums}
 \title{This method lets you filter and browse album reviews}
 \usage{
-getReviewsAlbums(album_ids, limit = 10,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getReviewsAlbums(
+  album_ids,
+  limit = 10,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{album_ids}{List of album IDs to seach for}

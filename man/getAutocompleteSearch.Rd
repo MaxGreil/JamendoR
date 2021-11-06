@@ -4,8 +4,11 @@
 \alias{getAutocompleteSearch}
 \title{Search Jamendo database for a string}
 \usage{
-getAutocompleteSearch(prefix, limit = 10,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getAutocompleteSearch(
+  prefix,
+  limit = 10,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{prefix}{String to seach for}

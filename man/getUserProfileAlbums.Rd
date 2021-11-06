@@ -4,8 +4,11 @@
 \alias{getUserProfileAlbums}
 \title{Get albums a user added to myalbums}
 \usage{
-getUserProfileAlbums(user_id = NULL, user_name = NULL,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getUserProfileAlbums(
+  user_id = NULL,
+  user_name = NULL,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{user_id}{User ID to seach for}

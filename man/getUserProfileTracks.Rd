@@ -4,8 +4,7 @@
 \alias{getUserProfileTracks}
 \title{Get tracks a user has liked, added to favorite or reviewed}
 \usage{
-getUserProfileTracks(user_id,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getUserProfileTracks(user_id, client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
 }
 \arguments{
 \item{user_id}{User ID to seach for}

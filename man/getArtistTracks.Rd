@@ -4,8 +4,12 @@
 \alias{getArtistTracks}
 \title{Get tracks from an artist}
 \usage{
-getArtistTracks(artist_id = NULL, artist_name = NULL, limit = 10,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getArtistTracks(
+  artist_id = NULL,
+  artist_name = NULL,
+  limit = 10,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{artist_id}{Artist ID to seach for}

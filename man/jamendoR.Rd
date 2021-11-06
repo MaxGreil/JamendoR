@@ -3,7 +3,6 @@
 \docType{package}
 \name{jamendoR}
 \alias{jamendoR}
-\alias{jamendoR-package}
 \title{\code{jamendoR} package}
 \description{
 A Quick and Easy Wrapper for Pulling Track Audio Features from Jamendo's Web API

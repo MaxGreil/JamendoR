@@ -4,8 +4,11 @@
 \alias{getTracksSimilar}
 \title{Search Jamendo database for a track}
 \usage{
-getTracksSimilar(track_id, limit = 10,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getTracksSimilar(
+  track_id,
+  limit = 10,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{track_id}{Track ID to seach for}

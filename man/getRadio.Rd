@@ -4,8 +4,11 @@
 \alias{getRadio}
 \title{This method returns information about a jamendo radio}
 \usage{
-getRadio(radio_id = NULL, radio_name = NULL,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getRadio(
+  radio_id = NULL,
+  radio_name = NULL,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{radio_id}{Radio ID to seach for}

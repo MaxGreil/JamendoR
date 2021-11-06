@@ -4,8 +4,11 @@
 \alias{resfreshToken}
 \title{Refresh expired OAuth token to access jamendo web API}
 \usage{
-resfreshToken(token, client_id = Sys.getenv("JAMENDO_CLIENT_ID"),
-  client_secret = Sys.getenv("JAMENDO_CLIENT_SECRET"))
+resfreshToken(
+  token,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID"),
+  client_secret = Sys.getenv("JAMENDO_CLIENT_SECRET")
+)
 }
 \arguments{
 \item{token}{OAuth access token (the previously created OAuth token)}

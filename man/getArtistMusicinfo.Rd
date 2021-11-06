@@ -4,8 +4,11 @@
 \alias{getArtistMusicinfo}
 \title{Get tag list of an artist}
 \usage{
-getArtistMusicinfo(artist_id = NULL, artist_name = NULL,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getArtistMusicinfo(
+  artist_id = NULL,
+  artist_name = NULL,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{artist_id}{Artist ID to seach for}
@@ -24,7 +27,7 @@ Get tag list of an artist. You can search for either an artist ID or an artist n
 \examples{
 \donttest{
 ##Example
- tagsFromID <- getArtistMusicinfo(artist_id="1510",limit=3)
- tagsFromName <- getArtistMusicinfo(artist_name="Judas Priestley",limit=3)
+ tagsFromID <- getArtistMusicinfo(artist_id="1510")
+ tagsFromName <- getArtistMusicinfo(artist_name="Judas Priestley")
 }
 }

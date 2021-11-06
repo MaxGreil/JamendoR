@@ -4,8 +4,11 @@
 \alias{getUserProfile}
 \title{Search Jamendo database for a user}
 \usage{
-getUserProfile(user_id = NULL, user_name = NULL,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getUserProfile(
+  user_id = NULL,
+  user_name = NULL,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{user_id}{User ID to seach for}

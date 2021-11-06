@@ -4,8 +4,11 @@
 \alias{getAlbumTracks}
 \title{Get tracks from an album}
 \usage{
-getAlbumTracks(album_id = NULL, album_name = NULL,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getAlbumTracks(
+  album_id = NULL,
+  album_name = NULL,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{album_id}{Album ID to seach for}

@@ -4,8 +4,11 @@
 \alias{getPlaylist}
 \title{Search Jamendo database for a playlist}
 \usage{
-getPlaylist(playlist_id = NULL, playlist_name = NULL,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getPlaylist(
+  playlist_id = NULL,
+  playlist_name = NULL,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{playlist_id}{Playlist ID to seach for}

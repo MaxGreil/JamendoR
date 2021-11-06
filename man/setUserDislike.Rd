@@ -4,8 +4,7 @@
 \alias{setUserDislike}
 \title{Dislike the track given by Track ID}
 \usage{
-setUserDislike(token, track_id,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+setUserDislike(token, track_id, client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
 }
 \arguments{
 \item{token}{Your OAuth access token}

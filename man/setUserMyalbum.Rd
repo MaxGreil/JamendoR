@@ -4,8 +4,7 @@
 \alias{setUserMyalbum}
 \title{Add album to your list of favorite albums myalbums}
 \usage{
-setUserMyalbum(token, album_id,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+setUserMyalbum(token, album_id, client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
 }
 \arguments{
 \item{token}{Your OAuth access token}

@@ -4,8 +4,12 @@
 \alias{getArtistsLocation}
 \title{This method let you select and filter geographical locations which artists have declared as reference for themselves}
 \usage{
-getArtistsLocation(location, city = NULL, limit = 10,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getArtistsLocation(
+  location,
+  city = NULL,
+  limit = 10,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{location}{The artist country (following ISO 3166_1 standard \url{https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Officially_assigned_code_elements})}

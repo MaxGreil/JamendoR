@@ -4,8 +4,11 @@
 \alias{jamendoOAuth}
 \title{Create OAuth token to access jamendo web API}
 \usage{
-jamendoOAuth(app_name, client_id = Sys.getenv("JAMENDO_CLIENT_ID"),
-  client_secret = Sys.getenv("JAMENDO_CLIENT_SECRET"))
+jamendoOAuth(
+  app_name,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID"),
+  client_secret = Sys.getenv("JAMENDO_CLIENT_SECRET")
+)
 }
 \arguments{
 \item{app_name}{App name (this is an internal identification for token if you wish to save authorization)}

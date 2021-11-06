@@ -4,8 +4,11 @@
 \alias{getAlbumMusicinfo}
 \title{Get tag list of an album}
 \usage{
-getAlbumMusicinfo(album_id = NULL, album_name = NULL,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getAlbumMusicinfo(
+  album_id = NULL,
+  album_name = NULL,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{album_id}{Album ID to seach for}

@@ -4,8 +4,12 @@
 \alias{getPlaylistTracks}
 \title{Get all tracks from a playlist}
 \usage{
-getPlaylistTracks(playlist_id = NULL, playlist_name = NULL,
-  limit = 10, client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getPlaylistTracks(
+  playlist_id = NULL,
+  playlist_name = NULL,
+  limit = 10,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{playlist_id}{Playlist ID to seach for}

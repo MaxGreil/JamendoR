@@ -4,8 +4,11 @@
 \alias{getTracksNamesearch}
 \title{Search Jamendo database for a track}
 \usage{
-getTracksNamesearch(namesearch, limit = 10,
-  client_id = Sys.getenv("JAMENDO_CLIENT_ID"))
+getTracksNamesearch(
+  namesearch,
+  limit = 10,
+  client_id = Sys.getenv("JAMENDO_CLIENT_ID")
+)
 }
 \arguments{
 \item{namesearch}{Search a track by name}
