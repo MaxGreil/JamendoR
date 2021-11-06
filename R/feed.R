@@ -16,8 +16,8 @@ getFeed<-function(limit=10, client_id = Sys.getenv('JAMENDO_CLIENT_ID')){
                 format = 'jsonpretty',
                 limit = limit,
                 lang = 'en')
+  res <- httr::RETRY('GET', url, query = params, encode='json') %>% httr::content()
   if(length(res$results) > 0) {
-    res <- httr::RETRY('GET', url, query = params, encode='json') %>% httr::content()
     json1<-jsonlite::fromJSON(jsonlite::toJSON(res))$results
     df<-json1[,c("id","title","link","position","date_start","date_end","type","joinid","text")]
     return(df)
