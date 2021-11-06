@@ -1,9 +1,7 @@
 
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/JamendoR?color=brightgreen)](https://cran.r-project.org/package=JamendoR)
 ![](http://cranlogs.r-pkg.org/badges/JamendoR?color=brightgreen)
-![](http://cranlogs.r-pkg.org/badges/grand-total/JamendoR) [![Travis-CI
-Build
-Status](https://travis-ci.org/MaxGreil/JamendoR.svg?branch=master)](https://travis-ci.org/MaxGreil/JamendoR)
+![](http://cranlogs.r-pkg.org/badges/grand-total/JamendoR)
 
 # JamendoR
 
