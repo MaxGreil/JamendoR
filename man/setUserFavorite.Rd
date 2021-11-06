@@ -22,7 +22,7 @@ Add a given track to your preferites
 ## Example
  app_name = ""
  if(app_name != "") {
-  token <- jamendoOAuth(app_name="xxxx")
+  token <- jamendoOAuth(app_name=app_name)
   setUserFavorite(token, "114069")
  }
 }

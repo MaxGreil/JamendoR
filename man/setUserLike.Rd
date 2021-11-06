@@ -22,7 +22,7 @@ Like the track given by Track ID
 ## Example
  app_name = ""
  if(app_name != "") {
-  token <- jamendoOAuth(app_name="xxxx")
+  token <- jamendoOAuth(app_name=app_name)
   setUserLike(token, "114069")
  }
 }

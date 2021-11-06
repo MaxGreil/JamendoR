@@ -22,7 +22,7 @@ Dislike the track given by Track ID
 ## Example
  app_name = ""
  if(app_name != "") {
-  token <- jamendoOAuth(app_name="xxxx")
+  token <- jamendoOAuth(app_name=app_name)
   setUserDislike(token, "114069")
  }
 }

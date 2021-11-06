@@ -22,7 +22,7 @@ Add album to your list of favorite albums myalbums
 ## Example
  app_name = ""
  if(app_name != "") {
-  token <- jamendoOAuth(app_name="xxxx")
+  token <- jamendoOAuth(app_name=app_name)
   setUserMyalbum(token, "14866")
  }
 }

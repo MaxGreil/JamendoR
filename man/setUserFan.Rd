@@ -22,7 +22,7 @@ Become a fan of an artist
 ## Example
  app_name = ""
  if(app_name != "") {
-  token <- jamendoOAuth(app_name="xxxx")
+  token <- jamendoOAuth(app_name=app_name)
   setUserFan(token, "1510")
  }
 }
