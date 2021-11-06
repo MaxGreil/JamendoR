@@ -20,7 +20,10 @@ Become a fan of an artist
 \examples{
 \donttest{
 ## Example
- token <- jamendoOAuth(app_name="xxxx")
- setUserFan(token, "1510")
+ app_name = ""
+ if(app_name != "") {
+  token <- jamendoOAuth(app_name="xxxx")
+  setUserFan(token, "1510")
+ }
 }
 }

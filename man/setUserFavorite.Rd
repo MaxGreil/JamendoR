@@ -20,7 +20,10 @@ Add a given track to your preferites
 \examples{
 \donttest{
 ## Example
- token <- jamendoOAuth(app_name="xxxx")
- setUserFavorite(token, "114069")
+ app_name = ""
+ if(app_name != "") {
+  token <- jamendoOAuth(app_name="xxxx")
+  setUserFavorite(token, "114069")
+ }
 }
 }

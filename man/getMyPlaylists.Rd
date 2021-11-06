@@ -21,7 +21,10 @@ Get your own playlists
 \examples{
 \donttest{
 ##Example
- token <- jamendoOAuth(app_name="xxxx")
- playlists <- getMyPlaylists(token)
+ app_name=""
+ if(app_name != "") {
+  token <- jamendoOAuth(app_name=app_name)
+  playlists <- getMyPlaylists(token)
+ }
 }
 }

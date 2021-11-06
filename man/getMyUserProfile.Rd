@@ -21,7 +21,10 @@ Get information about your user profile
 \examples{
 \donttest{
 ##Example
- token <- jamendoOAuth(app_name="xxxx")
- user <- getUserProfile(token)
+ app_name = ""
+ if(app_name != "") {
+  token <- jamendoOAuth(app_name=app_name)
+  user <- getUserProfile(token)
+ }
 }
 }

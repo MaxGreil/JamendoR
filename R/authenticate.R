@@ -12,9 +12,12 @@
 #'@return Returns an OAuth access token as environment
 #' @examples \donttest{
 #' ## Example
-#'  my_oauth <- jamendoOAuth(app_name="xxxx")
-#'  filedir <- tempdir()
-#'  save(my_oauth, file=file.path(filedir, "my_oauth"))
+#'  app_name = ""
+#'  if(app_name != "") {
+#'   my_oauth <- jamendoOAuth(app_name=app_name)
+#'   filedir <- tempdir()
+#'   save(my_oauth, file=file.path(filedir, "my_oauth"))
+#'  }
 #' }
 #'
 #'
@@ -43,9 +46,15 @@ jamendoOAuth<-function(app_name, client_id = Sys.getenv('JAMENDO_CLIENT_ID'), cl
 #'@return Returns an OAuth access token as environment
 #' @examples \donttest{
 #' ## Example
-#'  my_oauth <- resfreshToken(my_oauth)
-#'  filedir <- tempdir()
-#'  save(my_oauth, file=file.path(filedir, "my_oauth"))
+#'  app_name = ""
+#'  if(app_name != "") {
+#'   my_oauth <- jamendoOAuth(app_name=app_name)
+#'   filedir <- tempdir()
+#'   save(my_oauth, file=file.path(filedir, "my_oauth"))
+#'   my_oauth <- resfreshToken(my_oauth)
+#'   filedir <- tempdir()
+#'   save(my_oauth, file=file.path(filedir, "my_oauth"))
+#'  }
 #' }
 #'
 #'@export

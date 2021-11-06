@@ -40,8 +40,11 @@ getUserProfile<-function(user_id = NULL, user_name = NULL, client_id = Sys.geten
 #' See \url{https://developer.jamendo.com/v3.0/users} for more information.
 #' @examples \donttest{
 #' ##Example
-#'  token <- jamendoOAuth(app_name="xxxx")
-#'  user <- getUserProfile(token)
+#'  app_name = ""
+#'  if(app_name != "") {
+#'   token <- jamendoOAuth(app_name=app_name)
+#'   user <- getUserProfile(token)
+#'  }
 #' }
 #' @export
 
@@ -159,8 +162,11 @@ getUserProfileTracks<-function(user_id, client_id = Sys.getenv('JAMENDO_CLIENT_I
 #' See \url{https://developer.jamendo.com/v3.0/setuser/fan} for more information.
 #' @examples \donttest{
 #' ## Example
-#'  token <- jamendoOAuth(app_name="xxxx")
-#'  setUserFan(token, "1510")
+#'  app_name = ""
+#'  if(app_name != "") {
+#'   token <- jamendoOAuth(app_name="xxxx")
+#'   setUserFan(token, "1510")
+#'  }
 #' }
 #' @export
 
@@ -182,8 +188,11 @@ setUserFan<-function(token,artist_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID'
 #' See \url{https://developer.jamendo.com/v3.0/setuser/favorite} for more information.
 #' @examples \donttest{
 #' ## Example
-#'  token <- jamendoOAuth(app_name="xxxx")
-#'  setUserFavorite(token, "114069")
+#'  app_name = ""
+#'  if(app_name != "") {
+#'   token <- jamendoOAuth(app_name="xxxx")
+#'   setUserFavorite(token, "114069")
+#'  }
 #' }
 #' @export
 
@@ -205,8 +214,11 @@ setUserFavorite<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIEN
 #' See \url{https://developer.jamendo.com/v3.0/setuser/like} for more information.
 #' @examples \donttest{
 #' ## Example
-#'  token <- jamendoOAuth(app_name="xxxx")
-#'  setUserLike(token, "114069")
+#'  app_name = ""
+#'  if(app_name != "") {
+#'   token <- jamendoOAuth(app_name="xxxx")
+#'   setUserLike(token, "114069")
+#'  }
 #' }
 #' @export
 
@@ -228,8 +240,11 @@ setUserLike<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT_ID
 #' See \url{https://developer.jamendo.com/v3.0/setuser/dislike} for more information.
 #' @examples \donttest{
 #' ## Example
-#'  token <- jamendoOAuth(app_name="xxxx")
-#'  setUserDislike(token, "114069")
+#'  app_name = ""
+#'  if(app_name != "") {
+#'   token <- jamendoOAuth(app_name="xxxx")
+#'   setUserDislike(token, "114069")
+#'  }
 #' }
 #' @export
 
@@ -251,8 +266,11 @@ setUserDislike<-function(token, track_id, client_id = Sys.getenv('JAMENDO_CLIENT
 #' See \url{https://developer.jamendo.com/v3.0/setuser/myalbum} for more information.
 #' @examples \donttest{
 #' ## Example
-#'  token <- jamendoOAuth(app_name="xxxx")
-#'  setUserMyalbum(token, "14866")
+#'  app_name = ""
+#'  if(app_name != "") {
+#'   token <- jamendoOAuth(app_name="xxxx")
+#'   setUserMyalbum(token, "14866")
+#'  }
 #' }
 #' @export
 

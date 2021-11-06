@@ -29,9 +29,12 @@ file in disk to be re-used in future sessions. This function relies on the
 \examples{
 \donttest{
 ## Example
- my_oauth <- jamendoOAuth(app_name="xxxx")
- filedir <- tempdir()
- save(my_oauth, file=file.path(filedir, "my_oauth"))
+ app_name = ""
+ if(app_name != "") {
+  my_oauth <- jamendoOAuth(app_name=app_name)
+  filedir <- tempdir()
+  save(my_oauth, file=file.path(filedir, "my_oauth"))
+ }
 }
 
 

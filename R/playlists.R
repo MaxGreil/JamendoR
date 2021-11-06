@@ -69,8 +69,11 @@ getPlaylistsNamesearch<-function(namesearch, limit = 10, client_id = Sys.getenv(
 #' See \url{https://developer.jamendo.com/v3.0/playlists} for more information.
 #' @examples \donttest{
 #' ##Example
-#'  token <- jamendoOAuth(app_name="xxxx")
-#'  playlists <- getMyPlaylists(token)
+#'  app_name=""
+#'  if(app_name != "") {
+#'   token <- jamendoOAuth(app_name=app_name)
+#'   playlists <- getMyPlaylists(token)
+#'  }
 #' }
 #' @export
 

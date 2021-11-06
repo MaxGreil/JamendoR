@@ -20,7 +20,10 @@ Like the track given by Track ID
 \examples{
 \donttest{
 ## Example
- token <- jamendoOAuth(app_name="xxxx")
- setUserLike(token, "114069")
+ app_name = ""
+ if(app_name != "") {
+  token <- jamendoOAuth(app_name="xxxx")
+  setUserLike(token, "114069")
+ }
 }
 }
