@@ -178,8 +178,8 @@ getArtistsLocation<-function(location, city=NULL, limit=10, client_id = Sys.gete
 #' See \url{https://developer.jamendo.com/v3.0/artists/musicinfo} for more information.
 #' @examples \donttest{
 #' ##Example
-#'  tagsFromID <- getArtistMusicinfo(artist_id="1510",limit=3)
-#'  tagsFromName <- getArtistMusicinfo(artist_name="Judas Priestley",limit=3)
+#'  tagsFromID <- getArtistMusicinfo(artist_id="1510")
+#'  tagsFromName <- getArtistMusicinfo(artist_name="Judas Priestley")
 #' }
 #' @export
 
