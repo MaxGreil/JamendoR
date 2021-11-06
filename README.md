@@ -2,6 +2,7 @@
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/JamendoR?color=brightgreen)](https://cran.r-project.org/package=JamendoR)
 ![](http://cranlogs.r-pkg.org/badges/JamendoR?color=brightgreen)
 ![](http://cranlogs.r-pkg.org/badges/grand-total/JamendoR)
+[![R-CMD-check](https://github.com/MaxGreil/JamendoR/workflows/R-CMD-check/badge.svg)](https://github.com/MaxGreil/JamendoR/actions)
 
 # JamendoR
 
