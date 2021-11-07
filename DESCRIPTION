@@ -1,7 +1,7 @@
 Package: JamendoR
 Type: Package
 Title: Access to 'Jamendo' API
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(person("Maximilian", "Greil", 
                     role = c("aut", "cre"),
                     email = "maximilian_greil@web.de"), 
