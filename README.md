@@ -18,7 +18,7 @@ information in seconds.
 
 ## Installation
 
-CRAN Version 0.1.0 (recommended)
+CRAN Version 0.1.1 (recommended)
 
 ``` r
 install.packages('JamendoR')
